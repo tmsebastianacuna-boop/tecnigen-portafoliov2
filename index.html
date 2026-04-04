@@ -1,255 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TECNIGEN — Portafolio Diagnóstica</title>
-<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;circle cx=&#39;16&#39; cy=&#39;16&#39; r=&#39;14&#39; fill=&#39;%23C81919&#39;/&gt;&lt;text x=&#39;16&#39; y=&#39;21&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-size=&#39;14&#39; font-weight=&#39;bold&#39;&gt;T&lt;/text&gt;&lt;/svg&gt;">
-<style>
-:root{--r:#C81919;--bg:#F5F6F8;--border:#E4E6EB;--text:#0F1724;--muted:#5E6A80;--light:#EEF0F4;--radius:14px;--shadow:0 2px 8px rgba(0,0,0,.06)}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.6}
-::selection{background:var(--r);color:#fff}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#C8D0DC;border-radius:9px}
-a{color:var(--r);text-decoration:none;font-weight:600}a:hover{text-decoration:underline}
-@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-@keyframes in{from{opacity:0}to{opacity:1}}
-.nav{background:#fff;border-bottom:1px solid var(--border);padding:11px 0;position:sticky;top:0;z-index:200;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.nw{max-width:960px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.nbrand{display:flex;align-items:center;gap:10px}
-.nbrand-sub{font-size:9px;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase;font-weight:500}
-.nbrand-name{font-size:14px;font-weight:800;color:var(--r)}
-.nlinks{font-size:11px;display:flex;gap:12px;align-items:center}
-.nlinks a{color:var(--muted);font-weight:500;transition:color .15s}.nlinks a:hover{color:var(--r);text-decoration:none}
-.w{max-width:960px;margin:0 auto;padding:22px 20px}
-.hero{background:linear-gradient(135deg,#C81919 0%,#7B0000 100%);border-radius:18px;padding:36px 32px;margin-bottom:24px;color:#fff;position:relative;overflow:hidden}
-.hero-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.65;margin-bottom:10px;font-family:'DM Mono',monospace}
-.hero h1{font-size:26px;font-weight:900;line-height:1.25;margin-bottom:10px}
-.hero p{font-size:13px;opacity:.88;line-height:1.75;max-width:600px}
-.kpis{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
-.kpi{text-align:center;padding:9px 16px;background:rgba(255,255,255,.13);border-radius:10px;min-width:68px}
-.kpi b{display:block;font-size:19px;font-weight:900;font-family:'DM Mono',monospace}
-.kpi span{font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:.8}
-.sf{position:relative;margin-bottom:12px}
-.sf input{width:100%;padding:13px 18px 13px 46px;background:#fff;border:2px solid var(--border);border-radius:var(--radius);font-size:14px;font-family:inherit;outline:none;transition:border .2s,box-shadow .2s;box-shadow:var(--shadow)}
-.sf input:focus{border-color:var(--r);box-shadow:0 0 0 3px rgba(200,25,25,.08)}
-.sf .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#B0B8C8;font-size:17px}
-.ct{display:flex;gap:8px;margin-bottom:20px;align-items:center;flex-wrap:wrap}
-.btn{background:#fff;border:1px solid var(--border);border-radius:8px;padding:7px 15px;font-size:11px;cursor:pointer;font-family:inherit;font-weight:700;color:var(--muted);transition:all .15s;box-shadow:var(--shadow)}
-.btn:hover{background:var(--light);border-color:#CBD5E1;color:var(--text)}
-.meta{margin-left:auto;font-size:12px;color:var(--muted)}.meta b{color:var(--r)}
-.areas{display:flex;flex-direction:column;gap:9px}
-.ar{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .25s}
-.ar.op{box-shadow:0 4px 24px rgba(0,0,0,.07);border-color:#D1D8E4}
-.arh{padding:18px 22px;cursor:pointer;display:flex;align-items:center;gap:16px;user-select:none;transition:background .12s}
-.ari{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;transition:box-shadow .3s}
-.arn{font-size:9.5px;font-weight:800;letter-spacing:2px;margin-right:8px;font-family:'DM Mono',monospace}
-.art{font-size:15px;font-weight:700}
-.ard{color:var(--muted);font-size:12.5px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ara{font-size:16px;flex-shrink:0;transition:transform .3s}
-.ar.op .ara{transform:rotate(180deg)}.ar.op .ard{display:none}
-.arb{display:none;padding:0 22px 24px;animation:in .2s ease}
-.ar.op .arb{display:block}
-.adet{font-size:13px;color:#4B5563;line-height:1.78;padding:14px 18px;border-radius:10px;margin-bottom:20px;background:var(--light);border-left:3px solid currentColor}
-.bg-group{margin-bottom:18px}
-.bh{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px;color:#374151}
-.bh-line{height:2px;border-radius:1px;width:18px;display:inline-block;flex-shrink:0}
-.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:10px}
-.pr{border:1px solid var(--border);border-radius:11px;padding:13px 15px;cursor:pointer;transition:all .2s;background:#fff}
-.pr:hover{border-color:#C8D0DC;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.prr{display:flex;align-items:center;gap:10px}
-.prd{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.prn{font-size:13px;font-weight:700;flex:1}
-.prm{font-size:9px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:.5px;white-space:nowrap}
-.prb{display:none;margin-top:12px;animation:in .18s ease}
-.prb .pt{font-size:15px;font-weight:800;margin-bottom:7px;line-height:1.3}
-.prb .pd{font-size:12.5px;color:#4B5563;line-height:1.72}
-.prb .ps{display:flex;gap:5px;margin-top:10px;flex-wrap:wrap}
-.prb .ps span{font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:6px;letter-spacing:.3px}
-.prb .pa{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.prb .pa a,.prb .pa button{font-size:11px;font-weight:700;padding:7px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:5px;transition:all .15s;border:1.5px solid;cursor:pointer;font-family:inherit;text-decoration:none}
-.ft{text-align:center;margin-top:50px;padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:11px;line-height:2.2}
-.ft b{color:var(--text)}.ft a{color:var(--r)}
-.copy-badge{position:fixed;bottom:20px;right:20px;background:#1F2937;color:#fff;padding:10px 18px;border-radius:10px;font-size:12px;font-weight:600;pointer-events:none;opacity:0;transition:opacity .3s;z-index:999}
-.copy-badge.show{opacity:1}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TECNIGEN — Portafolio Diagnóstica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --r: #C81919;
+            --bg: #F5F6F8;
+            --border: #E4E6EB;
+            --text: #0F1724;
+            --muted: #5E6A80;
+            --light: #EEF0F4;
+            --radius: 14px;
+            --shadow: 0 2px 8px rgba(0,0,0,.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'DM Sans', sans-serif; 
+            font-size: 14px; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ajustes para Móvil */
+        @media (max-width: 600px) {
+            .hero { padding: 24px 20px !important; }
+            .hero h1 { font-size: 22px !important; }
+            .nw { justify-content: center !important; text-align: center; }
+            .nlinks { display: none; } /* Ocultar links pequeños en móvil para limpiar interfaz */
+            .pg { grid-template-columns: 1fr !important; }
+            .kpis { justify-content: center; }
+        }
+
+        .nav { background: #fff; border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 200; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+        .nw { max-width: 960px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nbrand { display: flex; align-items: center; gap: 10px; }
+        .nbrand-name { font-size: 15px; font-weight: 800; color: var(--r); }
+        
+        .w { max-width: 960px; margin: 0 auto; padding: 15px 15px 40px 15px; }
+        
+        .hero { 
+            background: linear-gradient(135deg, #C81919 0%, #7B0000 100%); 
+            border-radius: 18px; padding: 36px; margin-bottom: 20px; color: #fff; 
+        }
+        .hero h1 { font-size: 28px; font-weight: 900; margin-bottom: 10px; line-height: 1.2; }
+        .hero p { font-size: 14px; opacity: 0.9; max-width: 650px; }
+
+        .sf { position: relative; margin-bottom: 15px; }
+        .sf input { 
+            width: 100%; padding: 15px 15px 15px 45px; 
+            border: 2px solid var(--border); border-radius: var(--radius); 
+            font-size: 16px; /* Evita que iOS haga zoom automático */
+            outline: none; box-shadow: var(--shadow);
+        }
+        .sf .ico { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.4; font-size: 18px; }
+
+        .areas { display: flex; flex-direction: column; gap: 12px; }
+        .ar { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+        .arh { padding: 20px; cursor: pointer; display: flex; align-items: center; gap: 15px; }
+        .ari { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .art { font-size: 16px; font-weight: 700; }
+        .ard { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .arb { display: none; padding: 0 20px 20px; border-top: 1px solid #f0f0f0; }
+        .ar.op .arb { display: block; }
+        .ar.op .ara { transform: rotate(180deg); }
+        .ara { transition: transform 0.3s; margin-left: auto; opacity: 0.5; }
+
+        .adet { background: #f8fafc; padding: 15px; border-radius: 10px; margin: 15px 0; font-size: 13px; border-left: 4px solid var(--r); }
+
+        .pg { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+        .pr { border: 1px solid var(--border); border-radius: 12px; padding: 15px; background: #fff; cursor: pointer; }
+        .prn { font-weight: 700; font-size: 14px; }
+        .prb { display: none; margin-top: 10px; font-size: 13px; color: #444; }
+
+        .ft { text-align: center; padding: 40px 0; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 20px; }
+        
+        .kpis { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+        .kpi { background: rgba(255,255,255,0.15); padding: 8px 12px; border-radius: 8px; text-align: center; }
+        .kpi b { display: block; font-size: 16px; }
+        .kpi span { font-size: 9px; text-transform: uppercase; }
+
+        /* Botón de copiar */
+        .copy-badge { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 10px 20px; border-radius: 30px; font-size: 12px; opacity: 0; transition: 0.3s; pointer-events: none; }
+        .copy-badge.show { opacity: 1; }
+    </style>
 </head>
 <body>
 
 <div class="nav"><div class="nw">
-<div class="nbrand">
-<svg height="34" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="20" r="18" fill="#C81919"></circle>
-  <text x="20" y="26" text-anchor="middle" fill="white" font-size="18" font-weight="900" font-family="Arial">T</text>
-  <text x="48" y="16" fill="#C81919" font-size="11" font-weight="800" font-family="Arial">TECNIGEN</text>
-  <text x="48" y="30" fill="#888" font-size="8.5" font-family="Arial">medicina · ciencia · tecnología</text>
-</svg>
-<div><div class="nbrand-sub">medicina · ciencia · tecnología</div><div class="nbrand-name">Área Diagnóstica</div></div>
-</div>
-<div class="nlinks">
-<a href="https://www.tecnigen.cl/" target="_blank">tecnigen.cl</a><span style="color:#E5E7EB">|</span>
-<a href="https://www.academia-tecnigen.cl/" target="_blank">academia</a><span style="color:#E5E7EB">|</span>
-<a href="mailto:infodiagnostica@tecnigen.cl">contacto</a>
-</div>
+    <div class="nbrand">
+        <div style="background:var(--r); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-weight:900;">T</div>
+        <div class="nbrand-name">TECNIGEN DIAGNÓSTICA</div>
+    </div>
+    <div class="nlinks">
+        <a href="https://www.tecnigen.cl" target="_blank" style="color:var(--muted); font-size:12px; text-decoration:none;">tecnigen.cl</a>
+    </div>
 </div></div>
 
 <div class="w">
-<div class="hero">
-<div class="hero-tag">Fundada en 1968 · Las Condes, Santiago · ISO 9001 · ISO 13485</div>
-<h1>Portafolio Integral de Soluciones<br>para el Laboratorio Clínico</h1>
-<p>Líderes en Chile en equipamiento médico y soluciones de laboratorio clínico y científico. Más de 55 años conectando la tecnología avanzada con el diagnóstico nacional.</p>
-<div class="kpis">
-<div class="kpi"><b>+55</b><span>Años</span></div>
-<div class="kpi"><b>+200</b><span>Colaboradores</span></div>
-<div class="kpi"><b>9</b><span>Ciudades</span></div>
-<div class="kpi"><b>12</b><span>Áreas Dx</span></div>
-<div class="kpi"><b>ISO</b><span>9001·13485</span></div>
-</div></div>
-
-<div class="sf"><span class="ico">🔍</span>
-<input type="text" placeholder="Buscar por área, marca, equipo o tecnología..." id="si" oninput="filter()"></div>
-
-<div class="ct">
-<button class="btn" onclick="expAll()">▼ Expandir todo</button>
-<button class="btn" onclick="colAll()">▲ Contraer todo</button>
-<div class="meta"><b>12</b> áreas disponibles</div>
-</div>
-
-<div class="areas" id="ac">
-    <div class="ar" data-id="academia">
-        <div class="arh" onclick="tog(this.parentElement)">
-            <div class="ari" style="background:linear-gradient(135deg,#0A6EBD,#2196F3)">🎓</div>
-            <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center"><span class="arn" style="color:#2196F3">01</span><span class="art">Academia TECNIGEN</span></div>
-                <div class="ard">Formación especializada para profesionales[cite: 6].</div>
-            </div>
-            <div class="ara">▾</div>
-        </div>
-        <div class="arb">
-            <div class="adet" style="border-left-color:#2196F3">Plataforma educativa con convenios oficiales y cursos de especialización en calidad y gestión[cite: 7, 8].</div>
-            <div class="ea">
-                <a href="https://www.academia-tecnigen.cl/" target="_blank">🌐 Acceder a Academia</a>
-            </div>
+    <div class="hero">
+        <h1>Portafolio Digital</h1>
+        <p>Soluciones integrales para el laboratorio clínico y científico en Chile.</p>
+        <div class="kpis">
+            <div class="kpi"><b>+55</b><span>Años</span></div>
+            <div class="kpi"><b>12</b><span>Áreas</span></div>
+            <div class="kpi"><b>ISO</b><span>Certificados</span></div>
         </div>
     </div>
 
-    <div class="ar" data-id="sol">
-        <div class="arh" onclick="tog(this.parentElement)">
-            <div class="ari" style="background:linear-gradient(135deg,#1565C0,#42A5F5)">💻</div>
-            <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center"><span class="arn" style="color:#42A5F5">02</span><span class="art">Soluciones Digitales e Informática</span></div>
-                <div class="ard">LIS, conectividad y gestión integral[cite: 9].</div>
+    <div class="sf">
+        <span class="ico">🔍</span>
+        <input type="text" id="si" placeholder="Buscar área o tecnología..." onkeyup="filter()">
+    </div>
+
+    <div class="areas" id="ac">
+        <div class="ar" data-id="academia">
+            <div class="arh" onclick="tog(this)">
+                <div class="ari" style="background:#E3F2FD; color:#1976D2;">🎓</div>
+                <div>
+                    <div class="art">Academia TECNIGEN</div>
+                    <div class="ard">Formación y Capacitación Continua</div>
+                </div>
+                <div class="ara">▼</div>
             </div>
-            <div class="ara">▾</div>
+            <div class="arb">
+                <div class="adet">Plataforma de formación para profesionales del área diagnóstica.</div>
+                <div class="pg">
+                    <div class="pr" onclick="alert('Enlace a Academia')">
+                        <div class="prn">Cursos Especializados</div>
+                        <div class="prb" style="display:block">Acceso a webinars y certificaciones técnicas.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="arb">
-            <div class="adet" style="border-left-color:#42A5F5">Ecosistema TecBlue LIS y soluciones Abbott AlinIQ para optimización de procesos[cite: 10, 14].</div>
-            <div class="pg">
-                <div class="pr" id="prlis" onclick="togP('prlis','#1565C0','#42A5F5')">
-                    <div class="prr"><div class="prd" style="background:#42A5F5"></div><span class="prn">TecBlue LIS</span><span class="prm">VER</span></div>
-                    <div class="prb">
-                        <div class="pt">TecBlue LIS</div>
-                        <div class="pd">Sistema web escalable para el ciclo completo del laboratorio[cite: 10, 11].</div>
-                        <div class="pa">
-                            <button onclick="copyLink(event,'sol')">🔗 Compartir</button>
-                        </div>
+
+        <div class="ar" data-id="digital">
+            <div class="arh" onclick="tog(this)">
+                <div class="ari" style="background:#F3E5F5; color:#7B1FA2;">💻</div>
+                <div>
+                    <div class="art">Soluciones Digitales</div>
+                    <div class="ard">LIS, Middleware y Conectividad</div>
+                </div>
+                <div class="ara">▼</div>
+            </div>
+            <div class="arb">
+                <div class="adet">Sistemas de información avanzada para optimizar el flujo de trabajo.</div>
+                <div class="pg">
+                    <div class="pr">
+                        <div class="prn">TecBlue LIS</div>
+                        <div class="prb" style="display:block">Gestión integral del ciclo del laboratorio.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ar" data-id="auto">
+            <div class="arh" onclick="tog(this)">
+                <div class="ari" style="background:#EFEBE9; color:#4E342E;">⚙️</div>
+                <div>
+                    <div class="art">Automatización</div>
+                    <div class="ard">Pre y Post Analítica</div>
+                </div>
+                <div class="ara">▼</div>
+            </div>
+            <div class="arb">
+                <div class="adet">Sistemas robóticos para la gestión eficiente de muestras.</div>
+                <div class="pg">
+                    <div class="pr">
+                        <div class="prn">GLP Systems</div>
+                        <div class="prb" style="display:block">Transporte inteligente de muestras.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="ar" data-id="auto">
-        <div class="arh" onclick="tog(this.parentElement)">
-            <div class="ari" style="background:linear-gradient(135deg,#37474F,#607D8B)">⚙️</div>
-            <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center"><span class="arn" style="color:#607D8B">03</span><span class="art">Automatización de Laboratorio</span></div>
-                <div class="ard">GLP Systems + Aim Lab[cite: 22].</div>
-            </div>
-            <div class="ara">▾</div>
-        </div>
-        <div class="arb">
-            <div class="adet" style="border-left-color:#607D8B">Automatización total que reduce errores y mejora el turnaround time[cite: 18].</div>
-            <div class="pg">
-                <div class="pr" id="prglp" onclick="togP('prglp','#37474F','#607D8B')">
-                    <div class="prr"><div class="prd" style="background:#607D8B"></div><span class="prn">GLP Systems Track</span><span class="prm">VER</span></div>
-                    <div class="prb">
-                        <div class="pt">GLP Systems Track</div>
-                        <div class="pd">Transporte automatizado mediante Carriers[cite: 23].</div>
-                        <div class="pa"><button onclick="copyLink(event,'auto')">🔗 Compartir</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="ft">
+        <b>TECNIGEN S.A.</b><br>
+        Santiago, Chile · 2024
     </div>
-
-    <div class="ar" data-id="qc">
-        <div class="arh" onclick="tog(this.parentElement)">
-            <div class="ari" style="background:linear-gradient(135deg,#2E7D32,#43A047)">✅</div>
-            <div style="flex:1;min-width:0">
-                <div style="display:flex;align-items:center"><span class="arn" style="color:#43A047">04</span><span class="art">Control de Calidad</span></div>
-                <div class="ard">Gestión analítica y comparación interlaboratorio.</div>
-            </div>
-            <div class="ara">▾</div>
-        </div>
-        <div class="arb">
-            <div class="adet" style="border-left-color:#43A047">Soluciones Bio-Rad para el aseguramiento de la calidad analítica.</div>
-            <div class="pg">
-                <div class="pr" id="prunity" onclick="togP('prunity','#2E7D32','#43A047')">
-                    <div class="prr"><div class="prd" style="background:#43A047"></div><span class="prn">Unity Real Time</span><span class="prm">VER</span></div>
-                    <div class="prb">
-                        <div class="pt">Unity Real Time</div>
-                        <div class="pd">Software líder mundial para gestión de QC y cumplimiento ISO 15189.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
-<div class="ft">
-  <b>TECNIGEN S.A.</b> · <a href="https://www.tecnigen.cl" target="_blank">tecnigen.cl</a><br>
-  © 2024 · Portafolio Digital de Soluciones Diagnósticas
 </div>
 
-</div>
-
-<div id="cb" class="copy-badge">Enlace copiado al portapapeles</div>
+<div id="cb" class="copy-badge">Copiado al portapapeles</div>
 
 <script>
-function tog(el){el.classList.toggle('op')}
-function togP(id,cc,ac){
-  const el=document.getElementById(id);
-  const b=el.querySelector('.prb');
-  const r=el.querySelector('.prr');
-  const isOpen=b.style.display==='block';
-  if(!isOpen){
-    b.style.display='block';r.style.display='none';
-    el.style.background='#F9FAFB';el.style.borderColor=ac+'44';
-  } else {
-    b.style.display='none';r.style.display='flex';
-    el.style.background='#fff';el.style.borderColor='var(--border)';
-  }
-}
-function expAll(){document.querySelectorAll('.ar').forEach(e=>e.classList.add('op'))}
-function colAll(){document.querySelectorAll('.ar').forEach(e=>e.classList.remove('op'))}
-function filter(){
-  const q=document.getElementById('si').value.toLowerCase();
-  document.querySelectorAll('.ar').forEach(ar => {
-    const text = ar.innerText.toLowerCase();
-    ar.style.display = text.includes(q) ? 'block' : 'none';
-  });
-}
-function copyLink(e,id){
-  e.stopPropagation();
-  const url=window.location.origin+window.location.pathname+'#'+id;
-  navigator.clipboard.writeText(url).then(()=>{
-    const b=document.getElementById('cb');
-    b.classList.add('show');
-    setTimeout(()=>b.classList.remove('show'),2000);
-  });
-}
+    // Función para expandir/contraer áreas
+    function tog(header) {
+        const parent = header.parentElement;
+        parent.classList.toggle('op');
+    }
+
+    // Buscador optimizado
+    function filter() {
+        const q = document.getElementById('si').value.toLowerCase();
+        const areas = document.querySelectorAll('.ar');
+        
+        areas.forEach(ar => {
+            const text = ar.innerText.toLowerCase();
+            if (text.includes(q)) {
+                ar.style.display = 'block';
+                if (q.length > 2) ar.classList.add('op'); // Expandir si el usuario busca algo específico
+            } else {
+                ar.style.display = 'none';
+            }
+        });
+    }
+
+    // Evitar problemas de scroll en móviles al abrir menús
+    document.querySelectorAll('.arh').forEach(el => {
+        el.addEventListener('touchstart', function(){}, {passive: true});
+    });
 </script>
+
 </body>
 </html>
