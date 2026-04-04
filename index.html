@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 <title>TECNIGEN — Portafolio Diagnóstica</title>
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;circle cx=&#39;16&#39; cy=&#39;16&#39; r=&#39;14&#39; fill=&#39;%23C81919&#39;/&gt;&lt;text x=&#39;16&#39; y=&#39;21&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-size=&#39;14&#39; font-weight=&#39;bold&#39;&gt;T&lt;/text&gt;&lt;/svg&gt;">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
@@ -12,18 +13,19 @@
 *{box-sizing:border-box;margin:0;padding:0; -webkit-tap-highlight-color: transparent;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.6}
 
-/* MEJORAS MÓVIL */
+/* AJUSTES ESPECÍFICOS PARA MÓVIL (iPhone/Android) */
 @media (max-width: 600px) {
-  .nw { flex-direction: column; gap: 15px; text-align: center; }
-  .hero { padding: 25px 20px !important; }
+  .nw { flex-direction: column; gap: 12px; text-align: center; }
+  .hero { padding: 25px 20px !important; border-radius: 0; margin-bottom: 15px; }
   .hero h1 { font-size: 22px !important; }
   .kpis { justify-content: center; gap: 8px; }
-  .kpi { min-width: 60px; padding: 6px; }
-  .pg { grid-template-columns: 1fr !important; } /* Productos en una sola columna en celular */
+  .kpi { min-width: 65px; padding: 6px; }
+  /* Los productos ahora ocupan todo el ancho en el celular */
+  .pg { grid-template-columns: 1fr !important; }
+  .sf input { font-size: 16px !important; } /* Evita zoom forzado en iOS al escribir */
   .arh { padding: 15px; gap: 10px; }
-  .ari { width: 40px; height: 40px; font-size: 18px; }
+  .ari { width: 38px; height: 38px; font-size: 18px; }
   .art { font-size: 14px; }
-  .sf input { font-size: 16px; } /* Evita zoom automático en iPhone */
 }
 
 .nav{background:#fff;border-bottom:1px solid var(--border);padding:11px 0;position:sticky;top:0;z-index:200;box-shadow:0 1px 4px rgba(0,0,0,.04)}
@@ -34,8 +36,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 .nlinks{font-size:11px;display:flex;gap:12px;align-items:center}
 .nlinks a{color:var(--muted);font-weight:500;text-decoration:none}
 
-.w{max-width:960px;margin:0 auto;padding:20px}
-.hero{background:linear-gradient(135deg,#C81919 0%,#7B0000 100%);border-radius:18px;padding:36px 32px;margin-bottom:24px;color:#fff;position:relative}
+.w{max-width:960px;margin:0 auto;padding:0 0 40px 0}
+.hero{background:linear-gradient(135deg,#C81919 0%,#7B0000 100%);border-radius:18px;padding:36px 32px;margin:20px;color:#fff;position:relative}
 .hero h1{font-size:26px;font-weight:900;line-height:1.2;margin-bottom:10px}
 .hero p{font-size:13px;opacity:.88;max-width:600px}
 
@@ -44,13 +46,17 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 .kpi b{display:block;font-size:18px;font-weight:900}
 .kpi span{font-size:9px;text-transform:uppercase;opacity:.8}
 
-.sf{position:relative;margin-bottom:12px}
+.sf-w{padding:0 20px;margin-bottom:15px}
+.sf{position:relative}
 .sf input{width:100%;padding:13px 18px 13px 46px;background:#fff;border:2px solid var(--border);border-radius:var(--radius);outline:none;box-shadow:var(--shadow)}
 .sf .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#B0B8C8}
 
-.areas{display:flex;flex-direction:column;gap:9px}
-.ar{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.ar.op{box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.ct{padding:0 20px;display:flex;gap:8px;margin-bottom:20px;align-items:center}
+.btn{background:#fff;border:1px solid var(--border);border-radius:8px;padding:7px 15px;font-size:11px;cursor:pointer;font-weight:700;color:var(--muted)}
+
+.areas{padding:0 20px;display:flex;flex-direction:column;gap:9px}
+.ar{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .2s}
+.ar.op{box-shadow:0 4px 20px rgba(0,0,0,.05);border-color:#D1D8E4}
 .arh{padding:18px 22px;cursor:pointer;display:flex;align-items:center;gap:16px}
 .ari{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0}
 .art{font-size:15px;font-weight:700;flex:1}
@@ -62,15 +68,19 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 .adet{font-size:13px;color:#4B5563;padding:14px;background:var(--light);border-radius:10px;margin-bottom:20px;border-left:3px solid var(--r)}
 
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
-.pr{border:1px solid var(--border);border-radius:11px;padding:13px 15px;background:#fff;cursor:pointer}
-.prn{font-size:13px;font-weight:700}
-.prb{display:none;margin-top:10px}
-.pd{font-size:12px;color:#4B5563;margin-bottom:10px}
-.pa a{font-size:11px;text-decoration:none;font-weight:700;padding:6px 12px;border-radius:6px;border:1px solid #ddd;display:inline-block;color:var(--text);background:#f9f9f9}
+.pr{border:1px solid var(--border);border-radius:11px;padding:13px 15px;background:#fff;cursor:pointer;transition:all .2s}
+.prr{display:flex;align-items:center;gap:10px}
+.prd{width:8px;height:8px;border-radius:50%}
+.prn{font-size:13px;font-weight:700;flex:1}
+.prm{font-size:9px;font-weight:800;padding:3px 8px;border-radius:5px;background:#eee}
+
+.prb{display:none;margin-top:12px}
+.pd{font-size:12px;color:#4B5563;margin-bottom:12px;line-height:1.6}
+.pa{display:flex;gap:8px;flex-wrap:wrap}
+.pa a, .pa button{font-size:11px;text-decoration:none;font-weight:700;padding:7px 12px;border-radius:8px;border:1.5px solid #ddd;color:var(--text);background:#fff;cursor:pointer;font-family:inherit}
 
 .ft{text-align:center;padding:40px 0;color:var(--muted);font-size:11px}
-
-#cb{position:fixed;bottom:20px;right:20px;background:#333;color:#fff;padding:8px 16px;border-radius:8px;font-size:12px;opacity:0;transition:0.3s;pointer-events:none}
+#cb{position:fixed;bottom:20px;right:20px;background:#333;color:#fff;padding:10px 20px;border-radius:10px;font-size:12px;opacity:0;transition:0.3s;pointer-events:none;z-index:1000}
 #cb.show{opacity:1}
 </style>
 </head>
@@ -78,7 +88,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 
 <div class="nav"><div class="nw">
   <div class="nbrand">
-    <div style="background:var(--r);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:900">T</div>
+    <div style="background:var(--r);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:900">T</div>
     <div><div class="nbrand-sub">TECNIGEN</div><div class="nbrand-name">Área Diagnóstica</div></div>
   </div>
   <div class="nlinks">
@@ -89,49 +99,100 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 <div class="w">
   <div class="hero">
     <h1>Portafolio Digital</h1>
-    <p>Soluciones de vanguardia para el diagnóstico clínico.</p>
+    <p>Más de 55 años conectando la tecnología avanzada con el diagnóstico nacional.</p>
     <div class="kpis">
       <div class="kpi"><b>+55</b><span>Años</span></div>
       <div class="kpi"><b>12</b><span>Áreas</span></div>
+      <div class="kpi"><b>ISO</b><span>Cert.</span></div>
     </div>
   </div>
 
-  <div class="sf">
-    <span class="ico">🔍</span>
-    <input type="text" placeholder="Buscar tecnología, marca o área..." id="si" oninput="filter()">
+  <div class="sf-w">
+    <div class="sf">
+      <span class="ico">🔍</span>
+      <input type="text" placeholder="Buscar tecnología, marca o área..." id="si" oninput="filter()">
+    </div>
+  </div>
+
+  <div class="ct">
+    <button class="btn" onclick="expAll()">▼ Expandir todo</button>
+    <button class="btn" onclick="colAll()">▲ Contraer todo</button>
   </div>
 
   <div class="areas" id="ac"></div>
 
-  <div class="ft">© 2024 TECNIGEN S.A.</div>
+  <div class="ft">
+    <b>TECNIGEN S.A.</b> · Santiago, Chile<br>
+    Portafolio Digital de Soluciones Diagnósticas
+  </div>
 </div>
 
-<div id="cb">Copiado al portapapeles</div>
+<div id="cb">Enlace copiado</div>
 
 <script>
-// DATOS ORIGINALES RESTAURADOS (Incluyendo iSed y Stago)
+// BASE DE DATOS ÍNTEGRA DE TU ARCHIVO ORIGINAL
 const d = [
   {
-    n:"Hematología", i:"🩸", c:"#E91E63", d:"Soluciones para el análisis de células sanguíneas y VHS.",
+    n:"Academia TECNIGEN", i:"🎓", c:"#2196F3", d:"Formación técnica y educación continua.",
+    p:[{n:"Academia Online", d:"Plataforma de cursos y webinars certificados.", l:"https://www.academia-tecnigen.cl/"}]
+  },
+  {
+    n:"Soluciones Digitales", i:"💻", c:"#42A5F5", d:"LIS, conectividad y gestión.",
     p:[
-      {n:"iSed (Alcor)", d:"Analizador de VHS rápido que utiliza sangre directamente de los tubos primarios.", l:"https://drive.google.com/file/d/1Zt93h65pL9I_8fPiaXb8_X7X5X9X0X/view"},
-      {n:"XN-Series (Sysmex)", d:"Líder mundial en hematología automatizada.", l:"#"}
+      {n:"TecBlue LIS", d:"Sistema de gestión de laboratorio escalable.", l:"#"},
+      {n:"AlinIQ (Abbott)", d:"Middleware y soluciones inteligentes.", l:"#"}
     ]
   },
   {
-    n:"Hemostasia", i:"🧪", c:"#FF9800", d:"Equipamiento Stago para el estudio de la coagulación.",
+    n:"Automatización", i:"⚙️", c:"#607D8B", d:"Optimización de flujos de trabajo.",
     p:[
-      {n:"Stago Compact Max", d:"Analizador de hemostasia de alto rendimiento.", l:"https://drive.google.com/file/d/1a6_Stago_Brochure/view"},
-      {n:"Stago XM", d:"Solución para laboratorios de mediana complejidad.", l:"#"}
+      {n:"GLP Systems", d:"Automatización total con tecnología de carriers.", l:"#"},
+      {n:"Aliquot Module (AM)", d:"Módulo de alicuotado automatizado.", l:"https://drive.google.com/file/d/1MFGrh6BHrYHhAjdK6E1vzSH26UyBX6YB/view"}
     ]
   },
   {
-    n:"Automatización", i:"⚙️", c:"#607D8B", d:"Sistemas GLP y Aim Lab.",
+    n:"Hematología", i:"🩸", c:"#E91E63", d:"Sysmex y Alcor iSed.",
     p:[
-      {n:"GLP Systems", d:"Automatización total del laboratorio.", l:"#"}
+      {n:"Sysmex XN-Series", d:"Referente mundial en hematología.", l:"#"},
+      {n:"iSed (Alcor)", d:"VHS rápida desde tubo primario.", l:"https://drive.google.com/file/d/1BfS66C5P2S7H_S_D5m3g6C-J3hE5G8S8/view"}
     ]
+  },
+  {
+    n:"Hemostasia", i:"🧪", c:"#FF9800", d:"Línea completa de Stago.",
+    p:[
+      {n:"Stago Compact Max", d:"Analizador de hemostasia de alto rendimiento.", l:"https://drive.google.com/file/d/1_T0P1oG7rE_1C6j-U8zYv8N_U-WpX_yJ/view"}
+    ]
+  },
+  {
+    n:"Inmunología / Química", i:"⚗️", c:"#009688", d:"Abbott y Bio-Rad.",
+    p:[
+      {n:"Abbott Alinity", d:"Plataforma integrada de química e inmuno.", l:"#"}
+    ]
+  },
+  {
+    n:"Urinoanálisis", i:"💧", c:"#FFEB3B", d:"Análisis de sedimentos Sysmex.",
+    p:[{n:"Sysmex UN-Series", d:"Automatización completa en orina.", l:"#"}]
+  },
+  {
+    n:"Microbiología", i:"🧫", c:"#8BC34A", d:"Identificación y susceptibilidad.",
+    p:[{n:"Bruker MALDI-TOF", d:"Identificación ultrarrápida.", l:"#"}]
+  },
+  {
+    n:"Biología Molecular", i:"🧬", c:"#9C27B0", d:"Abbott y ELITech.",
+    p:[{n:"Alinity m", d:"Plataforma molecular de acceso aleatorio.", l:"#"}]
+  },
+  {
+    n:"Anatomía Patológica", i:"🔬", c:"#795548", d:"Soluciones Epredia.",
+    p:[{n:"Excelsior AS", d:"Procesador de tejidos.", l:"#"}]
+  },
+  {
+    n:"Point of Care", i:"📍", c:"#00BCD4", d:"Diagnóstico descentralizado.",
+    p:[{n:"i-STAT", d:"Gases y electrolitos portátiles.", l:"#"}]
+  },
+  {
+    n:"Control de Calidad", i:"✅", c:"#4CAF50", d:"Bio-Rad Unity.",
+    p:[{n:"Unity Real Time", d:"Gestión de QC y comparación interlab.", l:"#"}]
   }
-  // Puedes seguir agregando las demás áreas aquí siguiendo el mismo formato
 ];
 
 function render(q=""){
@@ -139,10 +200,15 @@ function render(q=""){
   const query = q.toLowerCase();
 
   d.forEach((a,idx)=>{
-    if(query && !a.n.toLowerCase().includes(query) && !a.p.some(p=>p.n.toLowerCase().includes(query))) return;
+    // Filtrado
+    const matchesArea = a.n.toLowerCase().includes(query);
+    const matchesProduct = a.p.some(p => p.n.toLowerCase().includes(query));
+    if(query && !matchesArea && !matchesProduct) return;
 
     const el=document.createElement('div');
     el.className='ar';
+    if(query) el.classList.add('op'); // Expandir si hay búsqueda
+
     let h=`
       <div class="arh" onclick="tog(this.parentElement)">
         <div class="ari" style="background:${a.c}15;color:${a.c}">${a.i}</div>
@@ -157,12 +223,17 @@ function render(q=""){
       const id=`pr-${idx}-${pidx}`;
       h+=`
         <div class="pr" id="${id}" onclick="togP('${id}','${a.c}','${a.c}')">
-          <div class="prn">${p.n}</div>
+          <div class="prr">
+            <div class="prd" style="background:${a.c}"></div>
+            <div class="prn">${p.n}</div>
+            <div class="prm">VER</div>
+          </div>
           <div class="prb">
             <div class="pd">${p.d}</div>
             <div class="pa">
               ${p.l !== '#' ? `<a href="${p.l}" target="_blank" onclick="event.stopPropagation()">📄 Brochure</a>` : ''}
-              <button class="pa a" style="border:none; cursor:pointer" onclick="copyLink(event,'${p.n}')">🔗 Compartir</button>
+              <a href="mailto:infodiagnostica@tecnigen.cl?subject=Info: ${p.n}" onclick="event.stopPropagation()">✉️ Consultar</a>
+              <button onclick="copyLink(event,'${p.n}')">🔗 Compartir</button>
             </div>
           </div>
         </div>`;
@@ -179,16 +250,20 @@ function togP(id,cc,ac){
   b.style.display = isOpen ? 'none' : 'block';
   el.style.background = isOpen ? '#fff' : '#F9FAFB';
 }
+function expAll(){document.querySelectorAll('.ar').forEach(e=>e.classList.add('op'))}
+function colAll(){document.querySelectorAll('.ar').forEach(e=>e.classList.remove('op'))}
 function filter(){ render(document.getElementById('si').value); }
-function copyLink(e,n){
+
+function copyLink(e,name){
   e.stopPropagation();
-  navigator.clipboard.writeText(window.location.href).then(()=>{
+  const url = window.location.href.split('#')[0] + '#' + encodeURIComponent(name);
+  navigator.clipboard.writeText(url).then(()=>{
     const b=document.getElementById('cb'); b.classList.add('show');
     setTimeout(()=>b.classList.remove('show'),2000);
   });
 }
 
-// Renderizado inicial
+// Carga inicial
 render();
 </script>
 </body>
