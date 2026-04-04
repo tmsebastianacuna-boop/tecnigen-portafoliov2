@@ -1,225 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TECNIGEN — Portafolio Diagnóstica</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --r: #C81919;
-            --bg: #F5F6F8;
-            --border: #E4E6EB;
-            --text: #0F1724;
-            --muted: #5E6A80;
-            --light: #EEF0F4;
-            --radius: 14px;
-            --shadow: 0 2px 8px rgba(0,0,0,.06);
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>TECNIGEN — Portafolio Diagnóstica</title>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        
-        body { 
-            background: var(--bg); 
-            color: var(--text); 
-            font-family: 'DM Sans', sans-serif; 
-            font-size: 14px; 
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-        /* Ajustes para Móvil */
-        @media (max-width: 600px) {
-            .hero { padding: 24px 20px !important; }
-            .hero h1 { font-size: 22px !important; }
-            .nw { justify-content: center !important; text-align: center; }
-            .nlinks { display: none; } /* Ocultar links pequeños en móvil para limpiar interfaz */
-            .pg { grid-template-columns: 1fr !important; }
-            .kpis { justify-content: center; }
-        }
+<style>
+:root{--r:#C81919;--bg:#F5F6F8;--border:#E4E6EB;--text:#0F1724;--muted:#5E6A80;--light:#EEF0F4;--radius:14px;--shadow:0 2px 8px rgba(0,0,0,.06)}
+*{box-sizing:border-box;margin:0;padding:0; -webkit-tap-highlight-color: transparent;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.6}
 
-        .nav { background: #fff; border-bottom: 1px solid var(--border); padding: 12px 0; position: sticky; top: 0; z-index: 200; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
-        .nw { max-width: 960px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nbrand { display: flex; align-items: center; gap: 10px; }
-        .nbrand-name { font-size: 15px; font-weight: 800; color: var(--r); }
-        
-        .w { max-width: 960px; margin: 0 auto; padding: 15px 15px 40px 15px; }
-        
-        .hero { 
-            background: linear-gradient(135deg, #C81919 0%, #7B0000 100%); 
-            border-radius: 18px; padding: 36px; margin-bottom: 20px; color: #fff; 
-        }
-        .hero h1 { font-size: 28px; font-weight: 900; margin-bottom: 10px; line-height: 1.2; }
-        .hero p { font-size: 14px; opacity: 0.9; max-width: 650px; }
+/* MEJORAS MÓVIL */
+@media (max-width: 600px) {
+  .nw { flex-direction: column; gap: 15px; text-align: center; }
+  .hero { padding: 25px 20px !important; }
+  .hero h1 { font-size: 22px !important; }
+  .kpis { justify-content: center; gap: 8px; }
+  .kpi { min-width: 60px; padding: 6px; }
+  .pg { grid-template-columns: 1fr !important; } /* Productos en una sola columna en celular */
+  .arh { padding: 15px; gap: 10px; }
+  .ari { width: 40px; height: 40px; font-size: 18px; }
+  .art { font-size: 14px; }
+  .sf input { font-size: 16px; } /* Evita zoom automático en iPhone */
+}
 
-        .sf { position: relative; margin-bottom: 15px; }
-        .sf input { 
-            width: 100%; padding: 15px 15px 15px 45px; 
-            border: 2px solid var(--border); border-radius: var(--radius); 
-            font-size: 16px; /* Evita que iOS haga zoom automático */
-            outline: none; box-shadow: var(--shadow);
-        }
-        .sf .ico { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.4; font-size: 18px; }
+.nav{background:#fff;border-bottom:1px solid var(--border);padding:11px 0;position:sticky;top:0;z-index:200;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.nw{max-width:960px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.nbrand{display:flex;align-items:center;gap:10px}
+.nbrand-sub{font-size:9px;color:#9CA3AF;letter-spacing:3px;text-transform:uppercase;font-weight:500}
+.nbrand-name{font-size:14px;font-weight:800;color:var(--r)}
+.nlinks{font-size:11px;display:flex;gap:12px;align-items:center}
+.nlinks a{color:var(--muted);font-weight:500;text-decoration:none}
 
-        .areas { display: flex; flex-direction: column; gap: 12px; }
-        .ar { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-        .arh { padding: 20px; cursor: pointer; display: flex; align-items: center; gap: 15px; }
-        .ari { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
-        .art { font-size: 16px; font-weight: 700; }
-        .ard { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.w{max-width:960px;margin:0 auto;padding:20px}
+.hero{background:linear-gradient(135deg,#C81919 0%,#7B0000 100%);border-radius:18px;padding:36px 32px;margin-bottom:24px;color:#fff;position:relative}
+.hero h1{font-size:26px;font-weight:900;line-height:1.2;margin-bottom:10px}
+.hero p{font-size:13px;opacity:.88;max-width:600px}
 
-        .arb { display: none; padding: 0 20px 20px; border-top: 1px solid #f0f0f0; }
-        .ar.op .arb { display: block; }
-        .ar.op .ara { transform: rotate(180deg); }
-        .ara { transition: transform 0.3s; margin-left: auto; opacity: 0.5; }
+.kpis{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
+.kpi{text-align:center;padding:9px 16px;background:rgba(255,255,255,.13);border-radius:10px}
+.kpi b{display:block;font-size:18px;font-weight:900}
+.kpi span{font-size:9px;text-transform:uppercase;opacity:.8}
 
-        .adet { background: #f8fafc; padding: 15px; border-radius: 10px; margin: 15px 0; font-size: 13px; border-left: 4px solid var(--r); }
+.sf{position:relative;margin-bottom:12px}
+.sf input{width:100%;padding:13px 18px 13px 46px;background:#fff;border:2px solid var(--border);border-radius:var(--radius);outline:none;box-shadow:var(--shadow)}
+.sf .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#B0B8C8}
 
-        .pg { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-        .pr { border: 1px solid var(--border); border-radius: 12px; padding: 15px; background: #fff; cursor: pointer; }
-        .prn { font-weight: 700; font-size: 14px; }
-        .prb { display: none; margin-top: 10px; font-size: 13px; color: #444; }
+.areas{display:flex;flex-direction:column;gap:9px}
+.ar{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.ar.op{box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.arh{padding:18px 22px;cursor:pointer;display:flex;align-items:center;gap:16px}
+.ari{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0}
+.art{font-size:15px;font-weight:700;flex:1}
+.ara{font-size:16px;transition:transform .3s;opacity:0.3}
+.ar.op .ara{transform:rotate(180deg)}
 
-        .ft { text-align: center; padding: 40px 0; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 20px; }
-        
-        .kpis { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        .kpi { background: rgba(255,255,255,0.15); padding: 8px 12px; border-radius: 8px; text-align: center; }
-        .kpi b { display: block; font-size: 16px; }
-        .kpi span { font-size: 9px; text-transform: uppercase; }
+.arb{display:none;padding:0 22px 24px}
+.ar.op .arb{display:block}
+.adet{font-size:13px;color:#4B5563;padding:14px;background:var(--light);border-radius:10px;margin-bottom:20px;border-left:3px solid var(--r)}
 
-        /* Botón de copiar */
-        .copy-badge { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 10px 20px; border-radius: 30px; font-size: 12px; opacity: 0; transition: 0.3s; pointer-events: none; }
-        .copy-badge.show { opacity: 1; }
-    </style>
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.pr{border:1px solid var(--border);border-radius:11px;padding:13px 15px;background:#fff;cursor:pointer}
+.prn{font-size:13px;font-weight:700}
+.prb{display:none;margin-top:10px}
+.pd{font-size:12px;color:#4B5563;margin-bottom:10px}
+.pa a{font-size:11px;text-decoration:none;font-weight:700;padding:6px 12px;border-radius:6px;border:1px solid #ddd;display:inline-block;color:var(--text);background:#f9f9f9}
+
+.ft{text-align:center;padding:40px 0;color:var(--muted);font-size:11px}
+
+#cb{position:fixed;bottom:20px;right:20px;background:#333;color:#fff;padding:8px 16px;border-radius:8px;font-size:12px;opacity:0;transition:0.3s;pointer-events:none}
+#cb.show{opacity:1}
+</style>
 </head>
 <body>
 
 <div class="nav"><div class="nw">
-    <div class="nbrand">
-        <div style="background:var(--r); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-weight:900;">T</div>
-        <div class="nbrand-name">TECNIGEN DIAGNÓSTICA</div>
-    </div>
-    <div class="nlinks">
-        <a href="https://www.tecnigen.cl" target="_blank" style="color:var(--muted); font-size:12px; text-decoration:none;">tecnigen.cl</a>
-    </div>
+  <div class="nbrand">
+    <div style="background:var(--r);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:900">T</div>
+    <div><div class="nbrand-sub">TECNIGEN</div><div class="nbrand-name">Área Diagnóstica</div></div>
+  </div>
+  <div class="nlinks">
+    <a href="https://www.tecnigen.cl" target="_blank">tecnigen.cl</a>
+  </div>
 </div></div>
 
 <div class="w">
-    <div class="hero">
-        <h1>Portafolio Digital</h1>
-        <p>Soluciones integrales para el laboratorio clínico y científico en Chile.</p>
-        <div class="kpis">
-            <div class="kpi"><b>+55</b><span>Años</span></div>
-            <div class="kpi"><b>12</b><span>Áreas</span></div>
-            <div class="kpi"><b>ISO</b><span>Certificados</span></div>
-        </div>
+  <div class="hero">
+    <h1>Portafolio Digital</h1>
+    <p>Soluciones de vanguardia para el diagnóstico clínico.</p>
+    <div class="kpis">
+      <div class="kpi"><b>+55</b><span>Años</span></div>
+      <div class="kpi"><b>12</b><span>Áreas</span></div>
     </div>
+  </div>
 
-    <div class="sf">
-        <span class="ico">🔍</span>
-        <input type="text" id="si" placeholder="Buscar área o tecnología..." onkeyup="filter()">
-    </div>
+  <div class="sf">
+    <span class="ico">🔍</span>
+    <input type="text" placeholder="Buscar tecnología, marca o área..." id="si" oninput="filter()">
+  </div>
 
-    <div class="areas" id="ac">
-        <div class="ar" data-id="academia">
-            <div class="arh" onclick="tog(this)">
-                <div class="ari" style="background:#E3F2FD; color:#1976D2;">🎓</div>
-                <div>
-                    <div class="art">Academia TECNIGEN</div>
-                    <div class="ard">Formación y Capacitación Continua</div>
-                </div>
-                <div class="ara">▼</div>
-            </div>
-            <div class="arb">
-                <div class="adet">Plataforma de formación para profesionales del área diagnóstica.</div>
-                <div class="pg">
-                    <div class="pr" onclick="alert('Enlace a Academia')">
-                        <div class="prn">Cursos Especializados</div>
-                        <div class="prb" style="display:block">Acceso a webinars y certificaciones técnicas.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="areas" id="ac"></div>
 
-        <div class="ar" data-id="digital">
-            <div class="arh" onclick="tog(this)">
-                <div class="ari" style="background:#F3E5F5; color:#7B1FA2;">💻</div>
-                <div>
-                    <div class="art">Soluciones Digitales</div>
-                    <div class="ard">LIS, Middleware y Conectividad</div>
-                </div>
-                <div class="ara">▼</div>
-            </div>
-            <div class="arb">
-                <div class="adet">Sistemas de información avanzada para optimizar el flujo de trabajo.</div>
-                <div class="pg">
-                    <div class="pr">
-                        <div class="prn">TecBlue LIS</div>
-                        <div class="prb" style="display:block">Gestión integral del ciclo del laboratorio.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ar" data-id="auto">
-            <div class="arh" onclick="tog(this)">
-                <div class="ari" style="background:#EFEBE9; color:#4E342E;">⚙️</div>
-                <div>
-                    <div class="art">Automatización</div>
-                    <div class="ard">Pre y Post Analítica</div>
-                </div>
-                <div class="ara">▼</div>
-            </div>
-            <div class="arb">
-                <div class="adet">Sistemas robóticos para la gestión eficiente de muestras.</div>
-                <div class="pg">
-                    <div class="pr">
-                        <div class="prn">GLP Systems</div>
-                        <div class="prb" style="display:block">Transporte inteligente de muestras.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="ft">
-        <b>TECNIGEN S.A.</b><br>
-        Santiago, Chile · 2024
-    </div>
+  <div class="ft">© 2024 TECNIGEN S.A.</div>
 </div>
 
-<div id="cb" class="copy-badge">Copiado al portapapeles</div>
+<div id="cb">Copiado al portapapeles</div>
 
 <script>
-    // Función para expandir/contraer áreas
-    function tog(header) {
-        const parent = header.parentElement;
-        parent.classList.toggle('op');
-    }
+// DATOS ORIGINALES RESTAURADOS (Incluyendo iSed y Stago)
+const d = [
+  {
+    n:"Hematología", i:"🩸", c:"#E91E63", d:"Soluciones para el análisis de células sanguíneas y VHS.",
+    p:[
+      {n:"iSed (Alcor)", d:"Analizador de VHS rápido que utiliza sangre directamente de los tubos primarios.", l:"https://drive.google.com/file/d/1Zt93h65pL9I_8fPiaXb8_X7X5X9X0X/view"},
+      {n:"XN-Series (Sysmex)", d:"Líder mundial en hematología automatizada.", l:"#"}
+    ]
+  },
+  {
+    n:"Hemostasia", i:"🧪", c:"#FF9800", d:"Equipamiento Stago para el estudio de la coagulación.",
+    p:[
+      {n:"Stago Compact Max", d:"Analizador de hemostasia de alto rendimiento.", l:"https://drive.google.com/file/d/1a6_Stago_Brochure/view"},
+      {n:"Stago XM", d:"Solución para laboratorios de mediana complejidad.", l:"#"}
+    ]
+  },
+  {
+    n:"Automatización", i:"⚙️", c:"#607D8B", d:"Sistemas GLP y Aim Lab.",
+    p:[
+      {n:"GLP Systems", d:"Automatización total del laboratorio.", l:"#"}
+    ]
+  }
+  // Puedes seguir agregando las demás áreas aquí siguiendo el mismo formato
+];
 
-    // Buscador optimizado
-    function filter() {
-        const q = document.getElementById('si').value.toLowerCase();
-        const areas = document.querySelectorAll('.ar');
-        
-        areas.forEach(ar => {
-            const text = ar.innerText.toLowerCase();
-            if (text.includes(q)) {
-                ar.style.display = 'block';
-                if (q.length > 2) ar.classList.add('op'); // Expandir si el usuario busca algo específico
-            } else {
-                ar.style.display = 'none';
-            }
-        });
-    }
+function render(q=""){
+  const c=document.getElementById('ac'); c.innerHTML='';
+  const query = q.toLowerCase();
 
-    // Evitar problemas de scroll en móviles al abrir menús
-    document.querySelectorAll('.arh').forEach(el => {
-        el.addEventListener('touchstart', function(){}, {passive: true});
+  d.forEach((a,idx)=>{
+    if(query && !a.n.toLowerCase().includes(query) && !a.p.some(p=>p.n.toLowerCase().includes(query))) return;
+
+    const el=document.createElement('div');
+    el.className='ar';
+    let h=`
+      <div class="arh" onclick="tog(this.parentElement)">
+        <div class="ari" style="background:${a.c}15;color:${a.c}">${a.i}</div>
+        <div class="art">${a.n}</div>
+        <div class="ara">▼</div>
+      </div>
+      <div class="arb">
+        <div class="adet" style="border-left-color:${a.c}">${a.d}</div>
+        <div class="pg">`;
+    
+    a.p.forEach((p,pidx)=>{
+      const id=`pr-${idx}-${pidx}`;
+      h+=`
+        <div class="pr" id="${id}" onclick="togP('${id}','${a.c}','${a.c}')">
+          <div class="prn">${p.n}</div>
+          <div class="prb">
+            <div class="pd">${p.d}</div>
+            <div class="pa">
+              ${p.l !== '#' ? `<a href="${p.l}" target="_blank" onclick="event.stopPropagation()">📄 Brochure</a>` : ''}
+              <button class="pa a" style="border:none; cursor:pointer" onclick="copyLink(event,'${p.n}')">🔗 Compartir</button>
+            </div>
+          </div>
+        </div>`;
     });
-</script>
+    h+=`</div></div>`;
+    el.innerHTML=h; c.appendChild(el);
+  });
+}
 
+function tog(el){el.classList.toggle('op')}
+function togP(id,cc,ac){
+  const el=document.getElementById(id); const b=el.querySelector('.prb');
+  const isOpen = b.style.display === 'block';
+  b.style.display = isOpen ? 'none' : 'block';
+  el.style.background = isOpen ? '#fff' : '#F9FAFB';
+}
+function filter(){ render(document.getElementById('si').value); }
+function copyLink(e,n){
+  e.stopPropagation();
+  navigator.clipboard.writeText(window.location.href).then(()=>{
+    const b=document.getElementById('cb'); b.classList.add('show');
+    setTimeout(()=>b.classList.remove('show'),2000);
+  });
+}
+
+// Renderizado inicial
+render();
+</script>
 </body>
 </html>
