@@ -111,8 +111,11 @@ a{color:var(--r);text-decoration:none;font-weight:600}a:hover{text-decoration:un
 .pr.open{border-color:rgba(200,25,25,.25);box-shadow:0 6px 24px rgba(0,0,0,.08)}
 
 /* PRODUCT IMAGE */
-.pr-img{width:100%;height:170px;overflow:hidden;position:relative;background:#fff;flex-shrink:0;border-bottom:1px solid #eee}
+.pr-img{width:100%;height:170px;overflow:hidden;position:relative;background:#fff;flex-shrink:0;border-bottom:1px solid #f0f2f5;cursor:pointer}
 .pr-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:12px;background:#fff;transition:transform .4s ease}
+.pr:hover .pr-img img{transform:scale(1.06)}
+.pr-img::after{content:"ver detalle ▼";position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.5);color:#fff;font-size:9.5px;font-weight:700;text-align:center;padding:5px 0;opacity:0;transition:opacity .2s;letter-spacing:.5px;text-transform:uppercase}
+.pr:hover .pr-img::after{opacity:1}
 .pr:hover .pr-img img{transform:scale(1.05)}
 .pr-img-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.18) 100%)}
 .vtag{position:absolute;top:7px;left:7px;background:rgba(200,25,25,.88);border-radius:6px;padding:3px 8px;font-size:8.5px;font-weight:700;color:#fff;display:flex;align-items:center;gap:3px;letter-spacing:.3px}
@@ -407,47 +410,47 @@ var D=[
 
 /* ─── COUNT ───────────────────────────────────────────── */
 var IMG_MAP={
-  'Alinity ci-series':'https://www.blockscientific.com/web/image/product.template/119674/image_1920?unique=b451463',
-  'ARCHITECT c4000':'https://www.blockscientific.com/web/image/product.template/128510/image_1920?unique=0560bce',
-  'Alinity h-series (hs / hq)':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/alinity-h-series/alinity-h-series-hematology-analyzer-1457x488-2%20(1).png',
-  'Abbott Alinity m':'https://www.blockscientific.com/web/image/product.product/93132/image_1024/%5BALN-CI-001%5D%20Abbott%20Alinity%20ci%20Clinical%20Chemistry%20%26%20Immunology%20Analyzer?unique=b451463',
-  'GLP Systems Track':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/glp-system/2023/Website_GLP_Header_1457x477-01.jpg',
-  'ABBOTT — Serología de Donantes':'https://www.blockscientific.com/web/image/product.template/119674/image_1920?unique=b451463',
-  'eCL8000 (ECLIA)':'https://en.lifotronic.com/vancheerfile/Images/2022/8/20220824143321392.png',
-  'H100 Plus (HPLC)':'https://en.lifotronic.com/vancheerfile/Images/2023/4/20230424150733025.png',
-  'MAGLUMI X3':'https://snibe-gw.oss-cn-hongkong.aliyuncs.com/en/product/20230717/MAGLUMI-X3.png',
-  'SNIBE — MAGLUMI':'https://snibe-gw.oss-cn-hongkong.aliyuncs.com/en/product/20230717/MAGLUMI-X3.png',
-  'STA R Max 3':'https://www.stago-us.com/sites/default/files/2023-06/STA-R-Max3-analyzer.png',
-  'STA Compact Max 3':'https://www.stago-us.com/sites/default/files/2023-06/STA-Compact-Max3-analyzer.png',
-  'iSED / iSED PRO':'https://alcorscientific.com/wp-content/uploads/2025/04/2024-Selection.png',
-  'H-500':'https://en.dirui.com.cn/upload/H-500-product.jpg',
-  'H-800':'https://en.dirui.com.cn/upload/H-800-product.jpg',
-  'FUS-2000':'https://en.dirui.com.cn/upload/FUS-2000-product.jpg',
-  'FUS-3000 Plus':'https://en.dirui.com.cn/upload/FUS-3000Plus-product.jpg',
-  'Nova Prime / Prime Plus':'https://www.novabiomedical.com/wp-content/uploads/Nova-Prime-Plus-Blood-Gas-Analyzer.png',
-  'NovaNet (Gestión POCT)':'https://www.novabiomedical.com/wp-content/uploads/NovaNet-Point-of-Care-Management.png',
-  'Phadia 250 (ThermoFisher)':'https://www.thermofisher.com/content/dam/diagnostics/phadia/en/systems/phadia-250-system.png',
-  'SEBIA Hydrasys 2':'https://www.sebia.com/sites/default/files/hydrasys-2-scan.jpg',
-  'Pathfinder 900 Plus':'https://www.brooks.com/sites/default/files/2021-01/pathfinder-900-plus-system.png',
-  'Decapper Module (DM)':'https://www.brooks.com/sites/default/files/2021-01/tube-decapper-module.png',
-  'Recapper Module (RM)':'https://www.brooks.com/sites/default/files/2021-01/tube-sealer-module.png',
-  'Aliquot Module (AM)':'https://www.brooks.com/sites/default/files/2021-01/aliquot-module.png',
-  'GRIFOLS — Panther (NAT)':'https://www.grifols.com/sites/default/files/panther-system-product.png',
-  'F800':'https://www.maccura.com/upload/products/F800-hematology-analyzer.jpg',
-  'F810':'https://www.maccura.com/upload/products/F810-hematology-analyzer.jpg',
-  'F880':'https://www.maccura.com/upload/products/F880-hematology-analyzer.jpg',
-  'Acusera (CCI)':'https://www.randox.com/wp-content/uploads/Acusera-247-IQC.jpg',
-  'RIQAS (EQA)':'https://www.randox.com/wp-content/uploads/RIQAS-EQA.jpg',
-  'Tecnopath QC':'https://www.randox.com/wp-content/uploads/QC-Controls.jpg',
-  'Mindray':'https://www.mindray.com/content/dam/mindray/BC-6900-product.png',
-  'Bioer Technology':'https://www.bioer.com.cn/img/products/LineGene9600Plus.jpg',
-  'ASSERCA — Bolsas de Sangre':'https://www.fresenius-kabi.com/images/blood-collection-bags.jpg',
-  'TecBlue LIS':'https://drive.google.com/thumbnail?id=1EoW4VWSAap-kwbZsUkq-eSdV908kRXv1&sz=w400',
-  'Gestoc':'https://drive.google.com/thumbnail?id=1i1bJ5beUU_rVXNEX1FyFqVECWD0cTBwJ&sz=w400',
-  'Astac 3.0':'https://drive.google.com/thumbnail?id=1jTIF7UUeAP6jlRTJK5swxL1VnDL9_jE1&sz=w400',
-  'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w400',
-  'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w400',
-  'e-Delphyn BB — Software Banco de Sangre':'https://drive.google.com/thumbnail?id=1SoK464XLoCgHteB1LvRYlltXLXqbi6d_&sz=w400',
+  'TecBlue LIS':'https://drive.google.com/thumbnail?id=1EoW4VWSAap-kwbZsUkq-eSdV908kRXv1&sz=w500',
+  'Gestoc':'https://drive.google.com/thumbnail?id=1i1bJ5beUU_rVXNEX1FyFqVECWD0cTBwJ&sz=w500',
+  'Astac 3.0':'https://drive.google.com/thumbnail?id=1jTIF7UUeAP6jlRTJK5swxL1VnDL9_jE1&sz=w500',
+  'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w500',
+  'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w500',
+  'NovaNet (Gestión POCT)':'https://drive.google.com/thumbnail?id=1zy_VRizGgf3jnIakrmn131DyxiLR66c-&sz=w500',
+  'e-Delphyn BB — Software Banco de Sangre':'https://drive.google.com/thumbnail?id=1SoK464XLoCgHteB1LvRYlltXLXqbi6d_&sz=w500',
+  'GLP Systems Track':'https://drive.google.com/thumbnail?id=1o3gBFqBeVdSAkcdmJi65zDW0fBWerqxx&sz=w500',
+  'Pathfinder 900 Plus':'https://drive.google.com/thumbnail?id=1YMprWr6d3GGDUBSDdNalrMEavjLMRUuZ&sz=w500',
+  'Decapper Module (DM)':'https://drive.google.com/thumbnail?id=1JrYdwsQhxAN00AiKikey3DekskFAH9LG&sz=w500',
+  'Recapper Module (RM)':'https://drive.google.com/thumbnail?id=1LMLA2vSayJl9EKdryFSqQjXPZhefDMHd&sz=w500',
+  'Aliquot Module (AM)':'https://drive.google.com/thumbnail?id=1MFGrh6BHrYHhAjdK6E1vzSH26UyBX6YB&sz=w500',
+  'Acusera (CCI)':'https://drive.google.com/thumbnail?id=1xOD2LIfa5IPRxRRKboN-xc-iEPQjr8iW&sz=w500',
+  'RIQAS (EQA)':'https://drive.google.com/thumbnail?id=1yKrhA726ay2vHEHX6uqADxz3VTgBx522&sz=w500',
+  'Tecnopath QC':'https://drive.google.com/thumbnail?id=1xOD2LIfa5IPRxRRKboN-xc-iEPQjr8iW&sz=w500',
+  'Alinity ci-series':'https://drive.google.com/thumbnail?id=1a8n-jzEyxxgyYzTxXMW-HfkZ7LJdamXn&sz=w500',
+  'ARCHITECT c4000':'https://drive.google.com/thumbnail?id=1urrtZVGoJ1OvI101s7YFv0ZHF0uFXbis&sz=w500',
+  'MAGLUMI X3':'https://drive.google.com/thumbnail?id=1z6SOnWa7RtTxcU9d0-JWJ0vCdaTYkiiX&sz=w500',
+  'eCL8000 (ECLIA)':'https://drive.google.com/thumbnail?id=1VERwxKoF0oDncwhKHLh0ZVSORXL4K3rA&sz=w500',
+  'H100 Plus (HPLC)':'https://drive.google.com/thumbnail?id=1-mf2OBhEy91zUALkulMRtZxwdT68fkQb&sz=w500',
+  'Alinity h-series (hs / hq)':'https://drive.google.com/thumbnail?id=1JB8JRTzAip_OLaGfYB0snq2f0owD9q8E&sz=w500',
+  'STA R Max 3':'https://drive.google.com/thumbnail?id=1hVacet5Ma38d4yY06idEjlRxjGvVg8RM&sz=w500',
+  'STA Compact Max 3':'https://drive.google.com/thumbnail?id=1DnM53Xri9LUA7FVnyRfVuIYoCRHdrjiy&sz=w500',
+  'F800':'https://drive.google.com/thumbnail?id=1iYUpwCwxNvQ1wae1htOdRPAbEyqFAnIr&sz=w500',
+  'F810':'https://drive.google.com/thumbnail?id=17Hc6VqEqr5vnfbf0iUlE6frOQ9Lc6vw8&sz=w500',
+  'F880':'https://drive.google.com/thumbnail?id=1azUIvOoaXlWk2vREv8bGFAMNRzk89cBA&sz=w500',
+  'iSED / iSED PRO':'https://drive.google.com/thumbnail?id=1BaDYm36O8k5SXowwxeOpzv6Us8ZAM17U&sz=w500',
+  'H-500':'https://drive.google.com/thumbnail?id=1gpbcDtCOd4tsEuGpgc5Arj7w1o64kXpc&sz=w500',
+  'H-800':'https://drive.google.com/thumbnail?id=1xftedl4eoqkNBR7QCTJV52PDc17e5dlv&sz=w500',
+  'FUS-2000':'https://drive.google.com/thumbnail?id=1Xrpzf_Mn_DH1ArcAt1fSj8FfRPCYPdIo&sz=w500',
+  'FUS-3000 Plus':'https://drive.google.com/thumbnail?id=1CZvqZGDqvWd8qKIxCfW7poYMuDZb6rnm&sz=w500',
+  'Nova Prime / Prime Plus':'https://drive.google.com/thumbnail?id=1_OidwlkKG3V_fO58c8DofgMn2eSOO-NP&sz=w500',
+  'Abbott Alinity m':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
+  'Bioer Technology':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
+  'SEBIA Hydrasys 2':'https://drive.google.com/thumbnail?id=14EFXJRp5q-Me-5mRlCrwt9UgwQRoYWwf&sz=w500',
+  'SNIBE — MAGLUMI':'https://drive.google.com/thumbnail?id=1z6SOnWa7RtTxcU9d0-JWJ0vCdaTYkiiX&sz=w500',
+  'Phadia 250 (ThermoFisher)':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
+  'Mindray':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
+  'ABBOTT — Serología de Donantes':'https://drive.google.com/thumbnail?id=1a8n-jzEyxxgyYzTxXMW-HfkZ7LJdamXn&sz=w500',
+  'GRIFOLS — Panther (NAT)':'https://drive.google.com/thumbnail?id=1dLJundcLdNU7L7g6wOxJCvwWllsDLLJG&sz=w500',
+  'ASSERCA — Bolsas de Sangre':'https://drive.google.com/thumbnail?id=1dLJundcLdNU7L7g6wOxJCvwWllsDLLJG&sz=w500',
 };
 var tp=0;
 D.forEach(function(a){a.s.forEach(function(g){tp+=g.p.length;});});
@@ -723,7 +726,7 @@ function openFromHash(){
 function imgErr(img){
   var w=img.closest('.pr-img');
   if(!w)return;
-  // Try brochure thumbnail as fallback (Drive thumbnail of brochure cover)
+  // Try brochure thumbnail as fallback
   var pid=w.closest('.pr')?w.closest('.pr').id:'';
   if(pid){
     var prb=document.querySelector('#'+pid+' .prb');
@@ -733,22 +736,17 @@ function imgErr(img){
         if(bd.br){
           var m=bd.br.match(/\/d\/([^\/]+)/);
           if(m){
-            var fallbackUrl='https://drive.google.com/thumbnail?id='+m[1]+'&sz=w400';
-            if(img.src!==fallbackUrl){
-              img.onerror=null;
-              img.src=fallbackUrl;
-              return;
-            }
+            var fb='https://drive.google.com/thumbnail?id='+m[1]+'&sz=w500';
+            if(img.src!==fb){img.onerror=null;img.src=fb;return;}
           }
         }
       }catch(e){}
     }
   }
-  // Final fallback: gradient with area color
+  // Final fallback: colored gradient
   var pr=w.closest('.pr');
-  var cc=pr?pr.dataset.cc:'#555';
-  var aa=pr?pr.dataset.aa:'#888';
-  w.style.cssText='background:linear-gradient(135deg,'+cc+'15,'+aa+'25);display:flex;align-items:center;justify-content:center;width:100%;height:170px;flex-shrink:0;border-bottom:1px solid #eee';
+  var cc=pr?pr.dataset.cc:'#555';var aa=pr?pr.dataset.aa:'#888';
+  w.style.cssText='background:linear-gradient(135deg,'+cc+'15,'+aa+'25);display:flex;align-items:center;justify-content:center;width:100%;height:170px;flex-shrink:0;border-bottom:1px solid #f0f2f5;cursor:pointer';
   img.style.display='none';
 }
 
