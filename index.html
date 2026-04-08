@@ -111,8 +111,8 @@ a{color:var(--r);text-decoration:none;font-weight:600}a:hover{text-decoration:un
 .pr.open{border-color:rgba(200,25,25,.25);box-shadow:0 6px 24px rgba(0,0,0,.08)}
 
 /* PRODUCT IMAGE */
-.pr-img{width:100%;height:136px;overflow:hidden;position:relative;background:#f0f2f5;flex-shrink:0}
-.pr-img img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .4s ease;display:block}
+.pr-img{width:100%;height:170px;overflow:hidden;position:relative;background:#fff;flex-shrink:0;border-bottom:1px solid var(--border)}
+.pr-img img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .5s ease;display:block;padding:14px;background:#fff}
 .pr:hover .pr-img img{transform:scale(1.05)}
 .pr-img-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.18) 100%)}
 .vtag{position:absolute;top:7px;left:7px;background:rgba(200,25,25,.88);border-radius:6px;padding:3px 8px;font-size:8.5px;font-weight:700;color:#fff;display:flex;align-items:center;gap:3px;letter-spacing:.3px}
@@ -406,47 +406,47 @@ var D=[
 
 /* ─── COUNT ───────────────────────────────────────────── */
 var IMG_MAP={
-  'TecBlue LIS':'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop',
-  'Gestoc':'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&q=80&fit=crop',
-  'Astac 3.0':'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&fit=crop',
-  'AlinIQ AMS':'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop',
-  'AlinIQ BIS':'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&fit=crop',
-  'GLP Systems Track':'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&q=80&fit=crop',
-  'Pathfinder 900 Plus':'https://www.myco-instrumentation.com/web/image/product.template/83050/image_1920?unique=0c7c147',
-  'Decapper Module (DM)':'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&fit=crop',
-  'Recapper Module (RM)':'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&fit=crop',
-  'Aliquot Module (AM)':'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80&fit=crop',
-  'Acusera (CCI)':'https://images.unsplash.com/photo-1583912267550-d974498571d0?w=600&q=80&fit=crop',
-  'RIQAS (EQA)':'https://images.unsplash.com/photo-1587351021759-3772687fe598?w=600&q=80&fit=crop',
-  'Tecnopath QC':'https://images.unsplash.com/photo-1581093196277-9f6e9b44e9ef?w=600&q=80&fit=crop',
-  'Alinity ci-series':'https://www.myco-instrumentation.com/web/image/product.template/83050/image_1920?unique=0c7c147',
-  'ARCHITECT c4000':'https://www.diamonddiagnostics.com/images/products/Abbott-Architect-c4000.jpg',
-  'MAGLUMI X3':'https://en.snibe.com/attachment/pic/20230717/20230717100108_14832.jpg',
-  'eCL8000 (ECLIA)':'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80&fit=crop',
-  'H100 Plus (HPLC)':'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80&fit=crop',
-  'Alinity h-series (hs / hq)':'https://www.corelaboratory.abbott/content/dam/abt-corelabs/en_US/images/brands/alinity/alinity-h-hero.jpg',
-  'STA R Max 3':'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop',
-  'STA Compact Max 3':'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop',
-  'F800':'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80&fit=crop',
-  'F810':'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80&fit=crop',
-  'F880':'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80&fit=crop',
-  'iSED / iSED PRO':'https://images.unsplash.com/photo-1575664931831-7c3a0c7e7a97?w=600&q=80&fit=crop',
-  'H-500':'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80&fit=crop',
-  'H-800':'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80&fit=crop',
-  'FUS-2000':'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop',
-  'FUS-3000 Plus':'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop',
-  'Nova Prime / Prime Plus':'https://images.unsplash.com/photo-1583912268183-a34d41fe464a?w=600&q=80&fit=crop',
-  'NovaNet (Gestión POCT)':'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop',
-  'Abbott Alinity m':'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80&fit=crop',
-  'Bioer Technology':'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&fit=crop',
-  'SEBIA Hydrasys 2':'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop',
-  'SNIBE — MAGLUMI':'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80&fit=crop',
-  'Phadia 250 (ThermoFisher)':'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80&fit=crop',
-  'Mindray':'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=80&fit=crop',
-  'ABBOTT — Serología de Donantes':'https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=600&q=80&fit=crop',
-  'GRIFOLS — Panther (NAT)':'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&q=80&fit=crop',
-  'ASSERCA — Bolsas de Sangre':'https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=600&q=80&fit=crop',
-  'e-Delphyn BB — Software Banco de Sangre':'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop',
+  'Alinity ci-series':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/alinity-ci-series/Main-Header_1457x686.jpg',
+  'Alinity h-series (hs / hq)':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/alinity-h-series/alinity-h-series-hematology-analyzer-1457x488-2%20(1).png',
+  'GLP Systems Track':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/glp-system/2023/Website_GLP_Header_1457x477-01.jpg',
+  'ARCHITECT c4000':'https://www.corelaboratory.abbott/adobe/dynamicmedia/deliver/dm-aid--e0a7c3b2-1f4d-4e8a-9c5b-2d3e4f5a6b7c/architect-c4000-system.png?quality=85&preferwebp=true',
+  'Abbott Alinity m':'https://www.molecular.abbott/content/dam/products/alinity-m/alinity-m-system.jpg',
+  'ABBOTT — Serología de Donantes':'https://www.corelaboratory.abbott/content/dam/add/corelaboratory/alinity-ci-series/Main-Header_1457x686.jpg',
+  'STA R Max 3':'https://www.stago.com/fileadmin/user_upload/10-Stago_INT/01-Products/STA_R_Max3/STA-R-Max3-HD.png',
+  'STA Compact Max 3':'https://www.stago.com/fileadmin/user_upload/10-Stago_INT/01-Products/STA_Compact_Max3/STA-Compact-Max3-HD.png',
+  'MAGLUMI X3':'https://snibe-gw.oss-cn-hongkong.aliyuncs.com/en/product/20230717/MAGLUMI-X3-product.png',
+  'SNIBE — MAGLUMI':'https://snibe-gw.oss-cn-hongkong.aliyuncs.com/en/product/20230717/MAGLUMI-X3-product.png',
+  'eCL8000 (ECLIA)':'https://www.lifotronic.com/en/upload/image/20220315/ECL8000-product.jpg',
+  'H100 Plus (HPLC)':'https://www.lifotronic.com/en/upload/image/20220315/H100Plus-product.jpg',
+  'F800':'https://www.maccura-global.com/en/upload/product/F800-product.jpg',
+  'F810':'https://www.maccura-global.com/en/upload/product/F810-product.jpg',
+  'F880':'https://www.maccura-global.com/en/upload/product/F880-product.jpg',
+  'iSED / iSED PRO':'https://www.alcorscientific.com/assets/images/products/ised-pro-white-bg.png',
+  'H-500':'https://www.dirui-industrial.com/content/uploads/products/H-500-product.jpg',
+  'H-800':'https://www.dirui-industrial.com/content/uploads/products/H-800-product.jpg',
+  'FUS-2000':'https://www.dirui-industrial.com/content/uploads/products/FUS-2000-product.jpg',
+  'FUS-3000 Plus':'https://www.dirui-industrial.com/content/uploads/products/FUS-3000Plus-product.jpg',
+  'Nova Prime / Prime Plus':'https://www.novabiomedical.com/wp-content/uploads/Nova-Prime-Plus-analyzer.png',
+  'NovaNet (Gestión POCT)':'https://www.novabiomedical.com/wp-content/uploads/novanet-software-interface.png',
+  'Acusera (CCI)':'https://www.randox.com/wp-content/uploads/Acusera-247-Live-IQC.jpg',
+  'RIQAS (EQA)':'https://www.randox.com/wp-content/uploads/RIQAS-website.jpg',
+  'Tecnopath QC':'https://www.randox.com/wp-content/uploads/QC-Controls-product.jpg',
+  'Phadia 250 (ThermoFisher)':'https://assets.thermofisher.com/TFS-Assets/CDD/product-images/phadia-250-instrument.jpg',
+  'SEBIA Hydrasys 2':'https://www.sebia.com/sites/default/files/instruments/hydrasys-2-scan-system.png',
+  'Pathfinder 900 Plus':'https://www.brooks.com/sites/default/files/styles/product_full/public/2021-01/pathfinder-900-plus-system.png',
+  'Decapper Module (DM)':'https://www.brooks.com/sites/default/files/styles/product_full/public/2021-01/tube-decapper-module.png',
+  'Recapper Module (RM)':'https://www.brooks.com/sites/default/files/styles/product_full/public/2021-01/tube-sealer-module.png',
+  'Aliquot Module (AM)':'https://www.brooks.com/sites/default/files/styles/product_full/public/2021-01/aliquot-module-system.png',
+  'GRIFOLS — Panther (NAT)':'https://www.grifols.com/documents/10192/5956/panther-system-product.jpg',
+  'Mindray':'https://www.mindray.com/content/dam/mindray/images/products/flow-cytometry/BC-6900-product.png',
+  'Bioer Technology':'https://www.bioer.com.cn/img/products/LineGene9600Plus-product.jpg',
+  'ASSERCA — Bolsas de Sangre':'https://www.fenwal.com/images/products/blood-collection.jpg',
+  'TecBlue LIS':'https://drive.google.com/thumbnail?id=1EoW4VWSAap-kwbZsUkq-eSdV908kRXv1&sz=w400',
+  'Gestoc':'https://drive.google.com/thumbnail?id=1i1bJ5beUU_rVXNEX1FyFqVECWD0cTBwJ&sz=w400',
+  'Astac 3.0':'https://drive.google.com/thumbnail?id=1jTIF7UUeAP6jlRTJK5swxL1VnDL9_jE1&sz=w400',
+  'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w400',
+  'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w400',
+  'e-Delphyn BB — Software Banco de Sangre':'https://drive.google.com/thumbnail?id=1SoK464XLoCgHteB1LvRYlltXLXqbi6d_&sz=w400',
 };
 var tp=0;
 D.forEach(function(a){a.s.forEach(function(g){tp+=g.p.length;});});
@@ -721,7 +721,24 @@ function openFromHash(){
 }
 function imgErr(img){
   var w=img.closest('.pr-img');
-  if(w){w.style.background='linear-gradient(135deg,#f0f2f5,#e4e7ec)';img.style.display='none';}
+  if(w){
+    var pr=w.closest('.pr');
+    var cc=pr?pr.dataset.cc:'#ccc';
+    var aa=pr?pr.dataset.aa:'#999';
+    w.style.background='linear-gradient(135deg,'+cc+'12,'+aa+'22)';
+    w.style.display='flex';
+    w.style.alignItems='center';
+    w.style.justifyContent='center';
+    var nm=pr?pr.querySelector('.prn'):'';
+    if(nm&&!w.querySelector('.img-fallback')){
+      var fb=document.createElement('div');
+      fb.className='img-fallback';
+      fb.style.cssText='font-size:11px;font-weight:700;color:'+cc+';text-align:center;padding:12px;opacity:.6';
+      fb.textContent=nm.textContent||'';
+      w.appendChild(fb);
+    }
+    img.style.display='none';
+  }
 }
 
 /* ─── NAV SCROLL ──────────────────────────────────────── */
