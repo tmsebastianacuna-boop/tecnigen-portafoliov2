@@ -424,13 +424,13 @@ var IMG_MAP={
   'F880':'https://lh3.googleusercontent.com/d/1LAmZ_4GLUJNxBh7NQr1hynsPP7gqRdsT',
   'MAGLUMI X3':'https://lh3.googleusercontent.com/d/1skqMeU1zhkKmBYHbrWUXtZOdvE5qNkQT',
   'SNIBE — MAGLUMI':'https://lh3.googleusercontent.com/d/1skqMeU1zhkKmBYHbrWUXtZOdvE5qNkQT',
-  'iSED / iSED PRO':'https://lh3.googleusercontent.com/d/1F2wD4tbMPPg8lUA90LcaKUkm6s3ZlwLx',
+  'iSED / iSED PRO':'https://drive.google.com/file/d/1dcwsCQlHq96FXaWdRjAHK5l34EvGDoCo/view?usp=drive_link',
   'H-500':'https://lh3.googleusercontent.com/d/1yaMBvwgXMW1rBhYYrT96iRuaWAhSQM27',
-  'H-800':'https://lh3.googleusercontent.com/d/1yaMBvwgXMW1rBhYYrT96iRuaWAhSQM27',
+  'H-800':'https://drive.google.com/file/d/1AGZR87NG0w4Kk4ERo5RiauT42QKbpIK_/view?usp=drive_link',
   'FUS-2000':'https://lh3.googleusercontent.com/d/1KnZwJ-ifj8b5d_FpBogyB8utcALt1425',
   'FUS-3000 Plus':'https://lh3.googleusercontent.com/d/1NE4KIqe7f2HVyk5EoUfMrvoej8AFI3Qn',
   'Nova Prime / Prime Plus':'https://lh3.googleusercontent.com/d/1BXOH_jJIEjR5MGp3_V_ocog8i_Uvgn2K',
-  'NovaNet (Gestión POCT)':'https://drive.google.com/thumbnail?id=1zy_VRizGgf3jnIakrmn131DyxiLR66c-&sz=w500',
+  'NovaNet (Gestión POCT)':'https://drive.google.com/file/d/1x8GQ4ndeCpsxsHF82s0aibHCV-BG9vT4/view?usp=drive_link',
   'Phadia 250 (ThermoFisher)':'https://lh3.googleusercontent.com/d/1H6O1axBo-gBVTiMPyWu39WWKKh-82b3r',
   'SEBIA Hydrasys 2':'https://lh3.googleusercontent.com/d/1hm_EjUWvH4pc_P_eTVWuFUIYT3r7jki0',
   'Pathfinder 900 Plus':'https://lh3.googleusercontent.com/d/1oIDDiti9FRv3gK_Ifk4oT3hESAuy5HiU',
@@ -444,8 +444,8 @@ var IMG_MAP={
   'ASSERCA — Bolsas de Sangre':'https://lh3.googleusercontent.com/d/1cFNRv3QT8NGRMihtBKvoA-q__l495INM',
   'e-Delphyn BB — Software Banco de Sangre':'https://lh3.googleusercontent.com/d/1gXsN6DoLxmPkwO-F2PGkJQB7slK4g9la',
   'GLP Systems Track':'https://drive.google.com/thumbnail?id=1o3gBFqBeVdSAkcdmJi65zDW0fBWerqxx&sz=w500',
-  'Mindray':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
-  'Bioer Technology':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
+  'Mindray':'https://drive.google.com/file/d/1wYQUmObuxop6rI0TWibmBoiydgyHSHpy/view?usp=drive_link',
+  'Bioer Technology':'https://drive.google.com/file/d/1ny38XDIIgdCBiERRVjNILbD_SpPTaf1j/view?usp=drive_link',
   'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w500',
   'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w500',
   'TecBlue LIS':'https://drive.google.com/thumbnail?id=1EoW4VWSAap-kwbZsUkq-eSdV908kRXv1&sz=w500',
@@ -488,7 +488,12 @@ function render(q){
     h+='<div class="ar-info"><div class="ar-row"><span class="arn" style="color:'+a.a+'">'+a.n+'</span><span class="art">'+a.t+'</span></div><div class="ard">'+a.d+'</div></div>';
     h+='<div class="ara" style="color:'+a.a+'">▾</div></div>';
 
-    h+='<div class="arb"><div class="adet" style="border-left-color:'+a.a+'">'+a.dt+'</div>';
+    h+='<div class="pr-img" style="max-width:340px;margin-bottom:16px">
+    <img src="./index_files/logo-academia-tecnigen.png"
+       alt="Academia Tecnigen"
+       style="object-fit:contain">
+    </div>
+
 
     a.s.forEach(function(g){
       h+='<div class="bg-group"><div class="bh"><span class="bh-ln" style="background:'+a.a+'"></span>'+g.b+'</div><div class="pg">';
