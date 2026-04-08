@@ -112,7 +112,7 @@ a{color:var(--r);text-decoration:none;font-weight:600}a:hover{text-decoration:un
 
 /* PRODUCT IMAGE */
 .pr-img{width:100%;height:170px;overflow:hidden;position:relative;background:#fff;flex-shrink:0;border-bottom:1px solid #f0f2f5;cursor:pointer}
-.pr-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:12px;background:#fff;transition:transform .4s ease}
+.pr-img img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:12px;background:#fff;transition:transform .35s ease}
 .pr:hover .pr-img img{transform:scale(1.06)}
 .pr-img::after{content:"ver detalle ▼";position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.5);color:#fff;font-size:9.5px;font-weight:700;text-align:center;padding:5px 0;opacity:0;transition:opacity .2s;letter-spacing:.5px;text-transform:uppercase}
 .pr:hover .pr-img::after{opacity:1}
@@ -410,47 +410,47 @@ var D=[
 
 /* ─── COUNT ───────────────────────────────────────────── */
 var IMG_MAP={
+  'Alinity ci-series':'https://lh3.googleusercontent.com/d/1jOVnzdRv4RNB_uyR1TOQN-k58FxUaIjF',
+  'Alinity h-series (hs / hq)':'https://lh3.googleusercontent.com/d/1hEntE4JaBqQ_rQ9eXv7OmYu2w6lG1TU3',
+  'Abbott Alinity m':'https://lh3.googleusercontent.com/d/11S2K7HgirczkeEDaQxZQIxPZKuxnnaO1',
+  'ARCHITECT c4000':'https://lh3.googleusercontent.com/d/1PN-klk-zbkOJ2TQAJel-cb9RqcCBTS_N',
+  'ABBOTT — Serología de Donantes':'https://lh3.googleusercontent.com/d/1jOVnzdRv4RNB_uyR1TOQN-k58FxUaIjF',
+  'STA R Max 3':'https://lh3.googleusercontent.com/d/10MiKax43jh14ua8L4uwI-lFDFHh40uqX',
+  'STA Compact Max 3':'https://lh3.googleusercontent.com/d/11DDCSQwKY3fY2s2sh46JmrsHr5l9KHkk',
+  'eCL8000 (ECLIA)':'https://lh3.googleusercontent.com/d/1JhxG484xuOj6mqZDsNAk9fpP97_0fKeW',
+  'H100 Plus (HPLC)':'https://lh3.googleusercontent.com/d/18grrDwdQsqoB7gYLjSPIYg7tJ44kvAGz',
+  'F800':'https://lh3.googleusercontent.com/d/1P_QUqeSvPPneYr8ehS_8cO-mWHUT71y4',
+  'F810':'https://lh3.googleusercontent.com/d/1CxARjoAA06bbOXSQUCLGjequqvt_JEgO',
+  'F880':'https://lh3.googleusercontent.com/d/1LAmZ_4GLUJNxBh7NQr1hynsPP7gqRdsT',
+  'MAGLUMI X3':'https://lh3.googleusercontent.com/d/1skqMeU1zhkKmBYHbrWUXtZOdvE5qNkQT',
+  'SNIBE — MAGLUMI':'https://lh3.googleusercontent.com/d/1skqMeU1zhkKmBYHbrWUXtZOdvE5qNkQT',
+  'iSED / iSED PRO':'https://lh3.googleusercontent.com/d/1F2wD4tbMPPg8lUA90LcaKUkm6s3ZlwLx',
+  'H-500':'https://lh3.googleusercontent.com/d/1yaMBvwgXMW1rBhYYrT96iRuaWAhSQM27',
+  'H-800':'https://lh3.googleusercontent.com/d/1yaMBvwgXMW1rBhYYrT96iRuaWAhSQM27',
+  'FUS-2000':'https://lh3.googleusercontent.com/d/1KnZwJ-ifj8b5d_FpBogyB8utcALt1425',
+  'FUS-3000 Plus':'https://lh3.googleusercontent.com/d/1NE4KIqe7f2HVyk5EoUfMrvoej8AFI3Qn',
+  'Nova Prime / Prime Plus':'https://lh3.googleusercontent.com/d/1BXOH_jJIEjR5MGp3_V_ocog8i_Uvgn2K',
+  'NovaNet (Gestión POCT)':'https://drive.google.com/thumbnail?id=1zy_VRizGgf3jnIakrmn131DyxiLR66c-&sz=w500',
+  'Phadia 250 (ThermoFisher)':'https://lh3.googleusercontent.com/d/1H6O1axBo-gBVTiMPyWu39WWKKh-82b3r',
+  'SEBIA Hydrasys 2':'https://lh3.googleusercontent.com/d/1hm_EjUWvH4pc_P_eTVWuFUIYT3r7jki0',
+  'Pathfinder 900 Plus':'https://lh3.googleusercontent.com/d/1oIDDiti9FRv3gK_Ifk4oT3hESAuy5HiU',
+  'Decapper Module (DM)':'https://lh3.googleusercontent.com/d/1p88v8Sc9qPvNZqYNXa2rXNgA4yTrNLcx',
+  'Recapper Module (RM)':'https://lh3.googleusercontent.com/d/1aq4YmzS6NIQ7l8y5n7f7o65FiuK3rjmZ',
+  'Aliquot Module (AM)':'https://lh3.googleusercontent.com/d/1oIDDiti9FRv3gK_Ifk4oT3hESAuy5HiU',
+  'GRIFOLS — Panther (NAT)':'https://lh3.googleusercontent.com/d/1s2j8kpHaODl9QBcXBrn2l80bvBlMS2ma',
+  'Acusera (CCI)':'https://lh3.googleusercontent.com/d/1DU2Ykbbm1ADxmXudSMn1sRJrW4ETHJzE',
+  'RIQAS (EQA)':'https://lh3.googleusercontent.com/d/1dLrYSVRQE_IXJuJg9SNCqA6Tk5obEF29',
+  'Tecnopath QC':'https://lh3.googleusercontent.com/d/13t0ALWMvDn0X4_MgZpejV4t7Hz03y5At',
+  'ASSERCA — Bolsas de Sangre':'https://lh3.googleusercontent.com/d/1cFNRv3QT8NGRMihtBKvoA-q__l495INM',
+  'e-Delphyn BB — Software Banco de Sangre':'https://lh3.googleusercontent.com/d/1gXsN6DoLxmPkwO-F2PGkJQB7slK4g9la',
+  'GLP Systems Track':'https://drive.google.com/thumbnail?id=1o3gBFqBeVdSAkcdmJi65zDW0fBWerqxx&sz=w500',
+  'Mindray':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
+  'Bioer Technology':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
+  'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w500',
+  'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w500',
   'TecBlue LIS':'https://drive.google.com/thumbnail?id=1EoW4VWSAap-kwbZsUkq-eSdV908kRXv1&sz=w500',
   'Gestoc':'https://drive.google.com/thumbnail?id=1i1bJ5beUU_rVXNEX1FyFqVECWD0cTBwJ&sz=w500',
   'Astac 3.0':'https://drive.google.com/thumbnail?id=1jTIF7UUeAP6jlRTJK5swxL1VnDL9_jE1&sz=w500',
-  'AlinIQ AMS':'https://drive.google.com/thumbnail?id=1GKknJq0DwwVtis272eSFu4Tm1uYWcoHK&sz=w500',
-  'AlinIQ BIS':'https://drive.google.com/thumbnail?id=1E_qFV6QZHWsB5xOmFA4FGW9Awk1piFxw&sz=w500',
-  'NovaNet (Gestión POCT)':'https://drive.google.com/thumbnail?id=1zy_VRizGgf3jnIakrmn131DyxiLR66c-&sz=w500',
-  'e-Delphyn BB — Software Banco de Sangre':'https://drive.google.com/thumbnail?id=1SoK464XLoCgHteB1LvRYlltXLXqbi6d_&sz=w500',
-  'GLP Systems Track':'https://drive.google.com/thumbnail?id=1o3gBFqBeVdSAkcdmJi65zDW0fBWerqxx&sz=w500',
-  'Pathfinder 900 Plus':'https://drive.google.com/thumbnail?id=1YMprWr6d3GGDUBSDdNalrMEavjLMRUuZ&sz=w500',
-  'Decapper Module (DM)':'https://drive.google.com/thumbnail?id=1JrYdwsQhxAN00AiKikey3DekskFAH9LG&sz=w500',
-  'Recapper Module (RM)':'https://drive.google.com/thumbnail?id=1LMLA2vSayJl9EKdryFSqQjXPZhefDMHd&sz=w500',
-  'Aliquot Module (AM)':'https://drive.google.com/thumbnail?id=1MFGrh6BHrYHhAjdK6E1vzSH26UyBX6YB&sz=w500',
-  'Acusera (CCI)':'https://drive.google.com/thumbnail?id=1xOD2LIfa5IPRxRRKboN-xc-iEPQjr8iW&sz=w500',
-  'RIQAS (EQA)':'https://drive.google.com/thumbnail?id=1yKrhA726ay2vHEHX6uqADxz3VTgBx522&sz=w500',
-  'Tecnopath QC':'https://drive.google.com/thumbnail?id=1xOD2LIfa5IPRxRRKboN-xc-iEPQjr8iW&sz=w500',
-  'Alinity ci-series':'https://drive.google.com/thumbnail?id=1a8n-jzEyxxgyYzTxXMW-HfkZ7LJdamXn&sz=w500',
-  'ARCHITECT c4000':'https://drive.google.com/thumbnail?id=1urrtZVGoJ1OvI101s7YFv0ZHF0uFXbis&sz=w500',
-  'MAGLUMI X3':'https://drive.google.com/thumbnail?id=1z6SOnWa7RtTxcU9d0-JWJ0vCdaTYkiiX&sz=w500',
-  'eCL8000 (ECLIA)':'https://drive.google.com/thumbnail?id=1VERwxKoF0oDncwhKHLh0ZVSORXL4K3rA&sz=w500',
-  'H100 Plus (HPLC)':'https://drive.google.com/thumbnail?id=1-mf2OBhEy91zUALkulMRtZxwdT68fkQb&sz=w500',
-  'Alinity h-series (hs / hq)':'https://drive.google.com/thumbnail?id=1JB8JRTzAip_OLaGfYB0snq2f0owD9q8E&sz=w500',
-  'STA R Max 3':'https://drive.google.com/thumbnail?id=1hVacet5Ma38d4yY06idEjlRxjGvVg8RM&sz=w500',
-  'STA Compact Max 3':'https://drive.google.com/thumbnail?id=1DnM53Xri9LUA7FVnyRfVuIYoCRHdrjiy&sz=w500',
-  'F800':'https://drive.google.com/thumbnail?id=1iYUpwCwxNvQ1wae1htOdRPAbEyqFAnIr&sz=w500',
-  'F810':'https://drive.google.com/thumbnail?id=17Hc6VqEqr5vnfbf0iUlE6frOQ9Lc6vw8&sz=w500',
-  'F880':'https://drive.google.com/thumbnail?id=1azUIvOoaXlWk2vREv8bGFAMNRzk89cBA&sz=w500',
-  'iSED / iSED PRO':'https://drive.google.com/thumbnail?id=1BaDYm36O8k5SXowwxeOpzv6Us8ZAM17U&sz=w500',
-  'H-500':'https://drive.google.com/thumbnail?id=1gpbcDtCOd4tsEuGpgc5Arj7w1o64kXpc&sz=w500',
-  'H-800':'https://drive.google.com/thumbnail?id=1xftedl4eoqkNBR7QCTJV52PDc17e5dlv&sz=w500',
-  'FUS-2000':'https://drive.google.com/thumbnail?id=1Xrpzf_Mn_DH1ArcAt1fSj8FfRPCYPdIo&sz=w500',
-  'FUS-3000 Plus':'https://drive.google.com/thumbnail?id=1CZvqZGDqvWd8qKIxCfW7poYMuDZb6rnm&sz=w500',
-  'Nova Prime / Prime Plus':'https://drive.google.com/thumbnail?id=1_OidwlkKG3V_fO58c8DofgMn2eSOO-NP&sz=w500',
-  'Abbott Alinity m':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
-  'Bioer Technology':'https://drive.google.com/thumbnail?id=1yTRGK0N5nm3Dt1V9_u0w3PaOpPQM7upE&sz=w500',
-  'SEBIA Hydrasys 2':'https://drive.google.com/thumbnail?id=14EFXJRp5q-Me-5mRlCrwt9UgwQRoYWwf&sz=w500',
-  'SNIBE — MAGLUMI':'https://drive.google.com/thumbnail?id=1z6SOnWa7RtTxcU9d0-JWJ0vCdaTYkiiX&sz=w500',
-  'Phadia 250 (ThermoFisher)':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
-  'Mindray':'https://drive.google.com/thumbnail?id=1J3TT2bivbcxPkDvoSh3egt30geqrCeTL&sz=w500',
-  'ABBOTT — Serología de Donantes':'https://drive.google.com/thumbnail?id=1a8n-jzEyxxgyYzTxXMW-HfkZ7LJdamXn&sz=w500',
-  'GRIFOLS — Panther (NAT)':'https://drive.google.com/thumbnail?id=1dLJundcLdNU7L7g6wOxJCvwWllsDLLJG&sz=w500',
-  'ASSERCA — Bolsas de Sangre':'https://drive.google.com/thumbnail?id=1dLJundcLdNU7L7g6wOxJCvwWllsDLLJG&sz=w500',
 };
 var tp=0;
 D.forEach(function(a){a.s.forEach(function(g){tp+=g.p.length;});});
@@ -724,30 +724,27 @@ function openFromHash(){
   },400);
 }
 function imgErr(img){
-  var w=img.closest('.pr-img');
-  if(!w)return;
   // Try brochure thumbnail as fallback
-  var pid=w.closest('.pr')?w.closest('.pr').id:'';
+  var pid=img.closest('.pr')?img.closest('.pr').id:'';
   if(pid){
     var prb=document.querySelector('#'+pid+' .prb');
     if(prb&&prb.dataset.bd){
       try{
         var bd=JSON.parse(decodeURIComponent(prb.dataset.bd));
-        if(bd.br){
-          var m=bd.br.match(/\/d\/([^\/]+)/);
-          if(m){
-            var fb='https://drive.google.com/thumbnail?id='+m[1]+'&sz=w500';
-            if(img.src!==fb){img.onerror=null;img.src=fb;return;}
-          }
-        }
+        if(bd.br){var m=bd.br.match(/\/d\/([^\/]+)/);
+          if(m){var fb='https://drive.google.com/thumbnail?id='+m[1]+'&sz=w400';
+            if(img.src.indexOf(fb)<0){img.onerror=null;img.src=fb;return;}}}
       }catch(e){}
     }
   }
-  // Final fallback: colored gradient
-  var pr=w.closest('.pr');
-  var cc=pr?pr.dataset.cc:'#555';var aa=pr?pr.dataset.aa:'#888';
-  w.style.cssText='background:linear-gradient(135deg,'+cc+'15,'+aa+'25);display:flex;align-items:center;justify-content:center;width:100%;height:170px;flex-shrink:0;border-bottom:1px solid #f0f2f5;cursor:pointer';
-  img.style.display='none';
+  // Final fallback: gradient
+  var w=img.closest('.pr-img');
+  if(w){
+    var pr=w.closest('.pr');
+    var cc=pr?pr.dataset.cc:'#666';var aa=pr?pr.dataset.aa:'#999';
+    w.style.background='linear-gradient(135deg,'+cc+'18,'+aa+'28)';
+    img.style.display='none';
+  }
 }
 
 /* ─── NAV SCROLL ──────────────────────────────────────── */
@@ -833,32 +830,62 @@ function showCmp(){
   var a=cmpItems[0],b=cmpItems[1];
   var imgA=IMG_MAP[a.name]||'';
   var imgB=IMG_MAP[b.name]||'';
-  var imgHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1px">'
-    +'<div style="background:#fff;padding:16px;text-align:center">'
-    +(imgA?'<img src="'+imgA+'" style="height:100px;object-fit:contain;max-width:100%" onerror=\'imgErr(this)\'>':'')
-    +'<div style="font-weight:800;font-family:Syne,sans-serif;font-size:13px;margin-top:8px;color:#0D1117">'+a.name+'</div></div>'
-    +'<div style="background:#fff;padding:16px;text-align:center">'
-    +(imgB?'<img src="'+imgB+'" style="height:100px;object-fit:contain;max-width:100%" onerror=\'imgErr(this)\'>':'')
-    +'<div style="font-weight:800;font-family:Syne,sans-serif;font-size:13px;margin-top:8px;color:#0D1117">'+b.name+'</div></div>'
-    +'</div>';
-  
-  function row(label,va,vb){
-    var hi=(va!=='—'&&va!==vb)?'background:#FFF3CD':'';
-    var hib=(vb!=='—'&&va!==vb)?'background:#FFF3CD':'';
-    return '<tr><td>'+label+'</td><td class="val" style="'+hi+'">'+va+'</td><td class="val" style="'+hib+'">'+vb+'</td></tr>';
+  var cmpDiv=document.getElementById('cmpContent');
+
+  // Build image header cells
+  function makeImgCell(url,nm,borderColor){
+    var div=document.createElement('div');
+    div.style.cssText='background:#fff;padding:14px;text-align:center;border-bottom:3px solid '+borderColor;
+    if(url){
+      var img=document.createElement('img');
+      img.src=url;
+      img.style.cssText='height:110px;width:auto;max-width:100%;object-fit:contain;display:block;margin:0 auto 8px';
+      img.onerror=function(){this.style.display='none';};
+      div.appendChild(img);
+    }
+    var label=document.createElement('div');
+    label.style.cssText='font-weight:800;font-size:13px;font-family:Syne,sans-serif';
+    label.textContent=nm;
+    div.appendChild(label);
+    return div.outerHTML;
   }
-  
+
+  var imgHtml='<div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e0e4ea">'
+    +makeImgCell(imgA,a.name,'#C81919')
+    +makeImgCell(imgB,b.name,'#1565C0')
+    +'</div>';
+
+  function row(label,va,vb){
+    var diff=va!=='—'&&vb!=='—'&&va!==vb;
+    var bg=diff?'background:#FFF8E1':'';
+    return '<tr><td>'+label+'</td>'
+      +'<td class="val" style="'+bg+'">'+va+'</td>'
+      +'<td class="val" style="'+bg+'">'+vb+'</td></tr>';
+  }
+
   var rows='';
   rows+=row('Throughput',parseCmpField(a.specs,a.ds,'throughput'),parseCmpField(b.specs,b.ds,'throughput'));
   rows+=row('Dimensiones',parseCmpField(a.specs,a.ds,'dims'),parseCmpField(b.specs,b.ds,'dims'));
   rows+=row('STAT',parseCmpField(a.specs,a.ds,'stat'),parseCmpField(b.specs,b.ds,'stat'));
   rows+=row('LIS/HL7',parseCmpField(a.specs,a.ds,'lis'),parseCmpField(b.specs,b.ds,'lis'));
   rows+=row('Certificaciones',parseCmpField(a.specs,a.ds,'cert'),parseCmpField(b.specs,b.ds,'cert'));
-  rows+='<tr><td>Especificaciones</td><td>'+(a.specs||[]).map(function(s){return '<span style="display:inline-block;background:#F0F4F8;border-radius:4px;padding:2px 6px;margin:2px;font-size:11px">'+s+'</span>';}).join('')+'</td><td>'+(b.specs||[]).map(function(s){return '<span style="display:inline-block;background:#F0F4F8;border-radius:4px;padding:2px 6px;margin:2px;font-size:11px">'+s+'</span>';}).join('')+'</td></tr>';
-  rows+='<tr><td style="vertical-align:top">Descripción</td><td style="font-size:12px;color:#4B5563;line-height:1.6">'+(a.ds||'').substring(0,280)+'...</td><td style="font-size:12px;color:#4B5563;line-height:1.6">'+(b.ds||'').substring(0,280)+'...</td></tr>';
-  
-  var html=imgHtml+'<table class="cmp"><thead><tr><th>Atributo</th><th>'+a.name+'</th><th>'+b.name+'</th></tr></thead><tbody>'+rows+'</tbody></table>';
-  document.getElementById('cmpContent').innerHTML=html;
+
+  function spTags(specs){
+    return (specs||[]).map(function(s){
+      return '<span style="display:inline-block;background:#EEF2F7;border-radius:4px;padding:2px 7px;margin:2px;font-size:10px;font-weight:600">'+s+'</span>';
+    }).join('');
+  }
+  rows+='<tr><td>Especificaciones</td><td>'+spTags(a.specs)+'</td><td>'+spTags(b.specs)+'</td></tr>';
+  rows+='<tr><td style="vertical-align:top">Descripción</td>'
+    +'<td style="font-size:12px;color:#4B5563;line-height:1.65">'+((a.ds||'').substring(0,300))+'</td>'
+    +'<td style="font-size:12px;color:#4B5563;line-height:1.65">'+((b.ds||'').substring(0,300))+'</td></tr>';
+
+  cmpDiv.innerHTML=imgHtml
+    +'<div style="padding:0 20px 20px">'
+    +'<table class="cmp" style="margin-top:14px">'
+    +'<thead><tr><th style="width:110px">Atributo</th><th>'+a.name+'</th><th>'+b.name+'</th></tr></thead>'
+    +'<tbody>'+rows+'</tbody></table></div>';
+
   document.getElementById('cmpOv').classList.add('show');
   document.body.style.overflow='hidden';
 }
