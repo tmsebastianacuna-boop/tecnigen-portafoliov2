@@ -1001,9 +1001,8 @@ openFromHash();
   
   // Configuration
   const CONFIG = {
-    apiKey: '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',
-    apiUrl: 'https://api.groq.com/openai/v1/chat/completions',
-    model: 'mixtral-8x7b-32768',
+    apiKey: 'sk-ant-YOUR-API-KEY-HERE', // Replace with your API key
+    apiUrl: 'https://api.anthropic.com/v1/messages',
     model: 'claude-sonnet-4-20250514',
     maxTokens: 500,
     maxMessages: 10
@@ -1099,7 +1098,7 @@ DIRECTRICES:
     showLoading();
 
     // Check API key
-    if (CONFIG.apiKey.includes('YOUR')) {
+    if (CONFIG.apiKey === 'sk-ant-YOUR-API-KEY-HERE') {
       removeLoading();
       addMessage('⚠️ Error de configuración: API key no configurada. Por favor, configura tu API key de Anthropic en el código.', true, true);
       isLoading = false;
@@ -1119,15 +1118,13 @@ DIRECTRICES:
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${CONFIG.apiKey}`
+          'x-api-key': CONFIG.apiKey
         },
         body: JSON.stringify({
           model: CONFIG.model,
           max_tokens: CONFIG.maxTokens,
-          messages: [
-            { role: 'system', content: PORTFOLIO_CONTEXT },
-            ...historyToSend
-          ]
+          system: PORTFOLIO_CONTEXT,
+          messages: historyToSend
         })
       });
 
@@ -1144,8 +1141,8 @@ DIRECTRICES:
         }
       } else {
         const data = await response.json();
-        const botMessage = data.choices[0].message.content || 'No se pudo procesar la respuesta';
-        addMessage(botMessage, false);
+        const botMessage = data.content[0]?.text || 'No se pudo procesar la respuesta';
+        addMessage(botMessage, true);
         conversationHistory.push({ role: 'assistant', content: botMessage });
       }
     } catch (err) {
